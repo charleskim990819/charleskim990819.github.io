@@ -46,7 +46,7 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "teaching",
-          description: "Course materials, schedules, and resources for classes taught.",
+          description: "Courses I have supported as a teaching assistant at Yonsei University.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
@@ -444,7 +444,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-pda-lm-ink",
           title: 'PDA-LM Ink',
-          description: "Sintering-free, primer-free liquid-metal ink via catechol–Ga³⁺ chelation",
+          description: "Sintering-free, primer-free liquid-metal ink via catechol–Ga³⁺ chelation — a 10-minute deep dive",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-water-transfer-electronics",
@@ -472,16 +472,11 @@ ninja.data = [{
           description: "Combined EC + EMG + neurostim front-end roadmap",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "teachings-data-science-fundamentals",
-          title: 'Data Science Fundamentals',
-          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+            },},{id: "teachings-bio-electrical-electronics-laboratory-바이오전기전자실험",
+          title: 'Bio-electrical Electronics Laboratory (바이오전기전자실험)',
+          description: "Teaching assistant for the undergraduate hands-on laboratory course on biopotential acquisition, electrochemical sensing, and embedded data acquisition.",
           section: "Teachings",handler: () => {
-              window.location.href = "/teachings/data-science-fundamentals/";
-            },},{id: "teachings-introduction-to-machine-learning",
-          title: 'Introduction to Machine Learning',
-          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
-          section: "Teachings",handler: () => {
-              window.location.href = "/teachings/introduction-to-machine-learning/";
+              window.location.href = "/teachings/bio-electrical-electronics-lab/";
             },},{
         id: 'social-email',
         title: 'email',
