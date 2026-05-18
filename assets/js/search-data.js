@@ -30,13 +30,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/repositories/";
-          },
         },{id: "nav-cv",
           title: "CV",
           description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
@@ -482,7 +475,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%63%68%61%72%6C%65%73%6B%69%6D%39%39%30%38%31%39@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+          window.open("mailto:%6E%63%65%39%30%38%30@%79%6F%6E%73%65%69.%61%63.%6B%72", "_blank");
         },
       },{
         id: 'social-rss',
@@ -497,6 +490,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://github.com/charleskim990819", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/%EC%B0%AC%EC%88%98-%EA%B9%80-46782940b", "_blank");
         },
       },{
       id: 'light-theme',
