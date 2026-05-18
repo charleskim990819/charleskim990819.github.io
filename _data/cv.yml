@@ -45,34 +45,47 @@ cv:
           - "Bachelor of Science, College of Engineering"
 
     Experience:
-      - company: Yonsei University, College of Engineering
-        position: Teaching Assistant — Bio-electrical Electronics Laboratory (바이오전기전자실험)
+      - company: Yonsei University · School of Electrical & Electronic Engineering
+        position: Undergraduate Laboratory Instructor (Teaching Assistant) — Bio-electrical Electronics Lab
         location: Seoul, Republic of Korea
         start_date: 2024-09
         end_date: 2025-12
         summary: >
-          Lead lab sessions covering biopotential acquisition, electrochemical sensing,
-          and embedded data acquisition; mentor undergraduate teams through hands-on
-          experiments.
+          Led weekly laboratory sessions for the *Bio-electrical Electronics Laboratory*
+          (바이오전기전자실험) course, translating research-grade biopotential / electrochemical
+          / embedded instrumentation into hands-on exercises for undergraduate teams.
+          Designed lab handouts, debugged student hardware and firmware, and mentored
+          end-of-semester project work.
 
-      - company: ROK Army, 35th Infantry Division — Education & Training Command
-        position: Administrative Soldier (사단 교육훈련 담당)
+      - company: Republic of Korea Army · 35th Infantry Division Headquarters
+        position: Training Operations Specialist — Education & Training Command (행정병)
         location: Republic of Korea
         start_date: 2020-04
         end_date: 2021-10
         summary: >
-          Active-duty military service; supported divisional education and training
-          administration. Also served as interpreter during U.S.–ROK Combined
-          Exercises (Aug 2020 and Jul 2021, 1 month each).
+          Active-duty military service supporting divisional education and training
+          operations at the Headquarters' Education & Training Command. Coordinated
+          training schedules, instructor assignments, and curriculum logistics across
+          the division.
 
-      - company: Yonsei University, College of Engineering Student Council "PAGE"
-        position: Cultural Planning Team Member (문화기획팀)
+      - company: U.S. Forces Korea ↔ Republic of Korea Army
+        position: English Interpreter — U.S.–ROK Combined Joint Training Exercise
+        location: Republic of Korea
+        start_date: 2020-08
+        end_date: 2021-07
+        summary: >
+          Selected as combined-exercise interpreter for two annual cycles
+          (Aug 2020 and Jul 2021, ~1 month each), bridging communication between
+          U.S. and ROK forces during joint operations.
+
+      - company: Yonsei University · College of Engineering Student Council "PAGE"
+        position: Cultural Programs Coordinator — Cultural Planning Division (문화기획팀)
         location: Seoul, Republic of Korea
         start_date: 2019-05
         end_date: 2019-12
         summary: >
-          Planned and organized cultural events for the engineering student
-          community during freshman year.
+          Programmed and produced cultural events for the engineering student community
+          as part of PAGE's freshman-year cultural planning division.
 
     Awards & Certifications:
       - title: PTRD Scuba Diving Instructor Certification
@@ -82,11 +95,12 @@ cv:
           Scholarship Instructor Program (2nd cohort).
 
     Service & Leadership:
-      - title: President, Yonsei Skin-Scuba Diving Team (연세스킨스쿠버다이빙팀)
+      - title: President — Yonsei Skin-Scuba Diving Team (연세스킨스쿠버다이빙팀)
         organization: Yonsei University Central Club
         date: 2023-03 to 2023-08
-        description: Led one of Yonsei's central student clubs; organized training
-          dives, certifications, and outreach for the diving community.
+        description: Headed one of Yonsei's central student clubs; organized training
+          dives, member certifications, and outreach programs for the campus diving
+          community.
 
     Research Areas:
       - title: Liquid-Metal Materials
