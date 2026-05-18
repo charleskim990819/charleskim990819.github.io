@@ -63,3 +63,35 @@ horizontal: false
   {% endif %}
 {% endif %}
 </div>
+
+---
+
+<a id="repositories" href=".#repositories">
+  <h2 class="category">code &amp; repositories</h2>
+</a>
+
+<p>
+  All open-source code, hardware files, and project repositories are hosted on GitHub. Visit my profile or browse individual repositories below.
+</p>
+
+<p>
+  <a class="btn btn-primary" href="https://github.com/charleskim990819" target="_blank" rel="noopener">
+    <i class="fab fa-github"></i> View all repositories on GitHub →
+  </a>
+</p>
+
+{% if site.data.repositories.github_users %}
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  {% for user in site.data.repositories.github_users %}
+    {% include repository/repo_user.liquid username=user %}
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if site.data.repositories.github_repos %}
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center mt-3">
+  {% for repo in site.data.repositories.github_repos %}
+    {% include repository/repo.liquid repository=repo %}
+  {% endfor %}
+</div>
+{% endif %}

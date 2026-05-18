@@ -1,14 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - charleskim990819
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - charleskim990819/Biopotential-EXG-sPCB
+  - charleskim990819/charleskim990819.github.io

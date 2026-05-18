@@ -1,9 +1,8 @@
 # Social media links for Chansoo (Charles) Kim
-# Uncomment and fill in lines below as you set up each profile.
-email: charleskim990819@gmail.com
+email: nce9080@yonsei.ac.kr
 rss_icon: true
 github_username: charleskim990819
-# linkedin_username: chansoo-kim       # uncomment after creating LinkedIn
-# scholar_userid: AAAAAAAAAAA          # uncomment when you have a Google Scholar profile
-# orcid_id: 0000-0000-0000-0000        # uncomment when you have an ORCID
-# researchgate_profile: Chansoo-Kim    # uncomment when you have a ResearchGate
+linkedin_username: "%EC%B0%AC%EC%88%98-%EA%B9%80-46782940b"   # 찬수-김-46782940b (URL-encoded)
+# scholar_userid:      # uncomment when you have a Google Scholar profile
+# orcid_id:            # uncomment when you have an ORCID
+# researchgate_profile:

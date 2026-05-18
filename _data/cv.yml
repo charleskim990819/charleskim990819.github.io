@@ -1,11 +1,11 @@
 cv:
   name: Chansoo (Charles) Kim
   label: Graduate Researcher, Liquid-Metal Electronic Materials
-  email: charleskim990819@gmail.com
+  email: nce9080@yonsei.ac.kr
   location: Seoul, Republic of Korea
   image: ""
   summary: >
-    Graduate researcher at Yonsei University (Prof. Jeong-Mok Seo lab) developing
+    Graduate researcher at Yonsei University (BLISS Lab, Prof. Jungmok Seo) developing
     sintering-free liquid-metal inks, wearable bioelectronics, and miniaturized
     electrochemical sensor toolkits. Bridging materials chemistry, embedded firmware,
     and biointerface engineering.
@@ -23,15 +23,15 @@ cv:
 
   sections:
     Education:
-      - institution: Yonsei University
+      - institution: Yonsei University — BLISS Lab
         location: Seoul, Republic of Korea
-        url: https://www.yonsei.ac.kr/
+        url: https://bliss.yonsei.ac.kr/
         area: Electrical & Electronic Engineering (Liquid-Metal Electronic Materials track)
         studyType: Graduate Researcher
         start_date: 2025
         end_date: present
         highlights:
-          - "Advisor: Prof. Jeong-Mok Seo"
+          - "Advisor: Prof. Jungmok Seo (BLISS Lab)"
           - "Research focus: sintering-free LM inks, wearable bioelectronics, EC biosensing"
 
       - institution: Yonsei University

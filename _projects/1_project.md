@@ -192,4 +192,4 @@ If you work on:
 
 ### Acknowledgments
 
-This work is conducted in **Prof. Jeong-Mok Seo's lab** at Yonsei University, with computational support from the lab's ORCA / Slurm cluster. DFT methodology builds on the lab's prior amorphous Ga₂O₃ surface chemistry studies.
+This work is conducted in the **[BLISS Lab](https://bliss.yonsei.ac.kr/)** (Prof. Jungmok Seo) at Yonsei University, with computational support from the lab's ORCA / Slurm cluster. DFT methodology builds on the lab's prior amorphous Ga₂O₃ surface chemistry studies.
