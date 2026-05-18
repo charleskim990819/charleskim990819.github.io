@@ -13,10 +13,6 @@ cv:
   social_networks:
     - network: GitHub
       username: charleskim990819
-    # - network: LinkedIn
-    #   username: your-linkedin-handle
-    # - network: X
-    #   username: your-x-handle
 
   address:
     street: School of Electrical & Electronic Engineering
@@ -30,13 +26,67 @@ cv:
       - institution: Yonsei University
         location: Seoul, Republic of Korea
         url: https://www.yonsei.ac.kr/
-        area: Electrical & Electronic Engineering (Liquid-Metal Electronic Materials)
+        area: Electrical & Electronic Engineering (Liquid-Metal Electronic Materials track)
         studyType: Graduate Researcher
-        start_date: 2024
+        start_date: 2025
         end_date: present
         highlights:
           - "Advisor: Prof. Jeong-Mok Seo"
           - "Research focus: sintering-free LM inks, wearable bioelectronics, EC biosensing"
+
+      - institution: Yonsei University
+        location: Seoul, Republic of Korea
+        url: https://www.yonsei.ac.kr/
+        area: Electrical & Electronic Engineering
+        studyType: B.S.
+        start_date: 2019
+        end_date: 2025
+        highlights:
+          - "Bachelor of Science, College of Engineering"
+
+    Experience:
+      - company: Yonsei University, College of Engineering
+        position: Teaching Assistant — Bio-electrical Electronics Laboratory (바이오전기전자실험)
+        location: Seoul, Republic of Korea
+        start_date: 2024-09
+        end_date: 2025-12
+        summary: >
+          Lead lab sessions covering biopotential acquisition, electrochemical sensing,
+          and embedded data acquisition; mentor undergraduate teams through hands-on
+          experiments.
+
+      - company: ROK Army, 35th Infantry Division — Education & Training Command
+        position: Administrative Soldier (사단 교육훈련 담당)
+        location: Republic of Korea
+        start_date: 2020-04
+        end_date: 2021-10
+        summary: >
+          Active-duty military service; supported divisional education and training
+          administration. Also served as interpreter during U.S.–ROK Combined
+          Exercises (Aug 2020 and Jul 2021, 1 month each).
+
+      - company: Yonsei University, College of Engineering Student Council "PAGE"
+        position: Cultural Planning Team Member (문화기획팀)
+        location: Seoul, Republic of Korea
+        start_date: 2019-05
+        end_date: 2019-12
+        summary: >
+          Planned and organized cultural events for the engineering student
+          community during freshman year.
+
+    Awards & Certifications:
+      - title: PTRD Scuba Diving Instructor Certification
+        organization: PTRD (2nd cohort, Scholarship Instructor Program)
+        date: 2023-08
+        description: Earned the *Instructor* rating through PTRD's selective
+          Scholarship Instructor Program (2nd cohort).
+
+    Service & Leadership:
+      - title: President, Yonsei Skin-Scuba Diving Team (연세스킨스쿠버다이빙팀)
+        organization: Yonsei University Central Club
+        date: 2023-03 to 2023-08
+        description: Led one of Yonsei's central student clubs; organized training
+          dives, certifications, and outreach for the diving community.
 
     Research Areas:
       - title: Liquid-Metal Materials
@@ -70,4 +120,11 @@ cv:
       - language: Korean
         fluency: Native
       - language: English
-        fluency: Professional working proficiency
+        fluency: Professional working proficiency (served as interpreter during U.S.–ROK Combined Exercises)
+
+    Interests:
+      - title: Scuba Diving
+        description: >
+          Active diver since 2022; certified PTRD Instructor (2023). Past president
+          of the Yonsei Skin-Scuba Diving Team. Diving keeps me connected to the
+          aquatic interfaces that often inspire my biointerface research.
