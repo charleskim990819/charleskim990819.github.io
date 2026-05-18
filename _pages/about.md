@@ -2,16 +2,25 @@
 layout: about
 title: about
 permalink: /
-subtitle: Graduate Researcher · <a href='https://bliss.yonsei.ac.kr/' target='_blank'>BLISS Lab</a> (Prof. Jungmok Seo) · <a href='https://www.yonsei.ac.kr/' target='_blank'>Yonsei University</a>
+
+eyebrow: Graduate Researcher · BLISS Lab · Yonsei University
+headline: 'Liquid metal<br>at the <span class="accent">skin–silicon</span><br>interface.'
+lead: Designing sintering-free, primer-free liquid-metal inks and miniaturized wearable bioelectronics — bridging materials chemistry, embedded firmware, and biointerface engineering.
+meta:
+  - '<strong>Yonsei University</strong> · Seoul'
+  - 'Prof. Jungmok Seo · <strong><a href="https://bliss.yonsei.ac.kr/" target="_blank" style="color:inherit">BLISS Lab</a></strong>'
+  - 'Adv. Mater <strong>in prep</strong> · 2026'
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
-  more_info: >
-    <p>School of Electrical & Electronic Engineering</p>
-    <p>Yonsei University, Seoul</p>
-    <p>Republic of Korea</p>
+  name: Chansoo (Charles) Kim
+  subline: EE · B.S. 2025 · Graduate Researcher 2025–
+  stats:
+    - { n: '6',    l: 'Projects' }
+    - { n: '4',    l: 'Areas' }
+    - { n: '2026', l: 'Adv. Mater' }
 
 selected_papers: false
 social: true
@@ -23,10 +32,6 @@ latest_posts:
   enabled: false
 ---
 
-I am Chansoo (Charles) Kim, a graduate researcher in the [BLISS Lab](https://bliss.yonsei.ac.kr/) (Prof. Jungmok Seo) at Yonsei University, working at the intersection of **liquid-metal (LM) electronic materials**, **wearable bioelectronics**, and **electrochemical biosensors**.
-
-My research focuses on translating soft, conductive materials into deployable health-monitoring devices. I am especially interested in **sintering-free, primer-free liquid metal inks** that can be water-transferred onto skin, integrated with sensing front-ends (AD5941, ADS131M08, RHS2116), and packaged into miniaturized stretchable PCBs.
-
 ### Research interests
 
 - **Liquid metal materials** — catechol-Ga³⁺ chelation chemistry, EGaIn surface engineering, conductive inks for water-transfer electronics
@@ -34,9 +39,9 @@ My research focuses on translating soft, conductive materials into deployable he
 - **Electrochemical biosensing** — AD5941-based portable potentiostats, screen-printed electrodes, ion-selective sensing
 - **Biointerface chemistry** — PDRN-based regenerative coatings, anti-fouling lubricant chemistry, tissue-electrode interfaces
 
-### Current projects
+### Current focus
 
-I am currently leading work on a **sintering-free PDA-LM ink** (in preparation for *Advanced Materials*), a **water-transfer electronics platform** that prints functional LM circuits onto skin, and a **4-channel AD5941 electrochemical sensor toolkit** for amperometric and potentiometric measurements. See the [projects](/projects/) page for details.
+I am currently leading work on a **sintering-free PDA-LM ink** (in preparation for *Advanced Materials*), a **water-transfer electronics platform** that prints functional liquid-metal circuits onto skin, and a **4-channel AD5941 electrochemical sensor toolkit** for amperometric and potentiometric measurements. See the [projects](/projects/) page for details.
 
 ### Get in touch
 
