@@ -2,7 +2,7 @@
 layout: course
 title: Bio-electrical Electronics Laboratory (바이오전기전자실험)
 description: Teaching assistant for the undergraduate hands-on laboratory course on biopotential acquisition, electrochemical sensing, and embedded data acquisition.
-instructor: Prof. Jeong-Mok Seo
+instructor: Prof. Jungmok Seo (BLISS Lab)
 year: 2024–2025
 term: Fall 2024 — Fall 2025
 location: Yonsei University, School of Electrical & Electronic Engineering
