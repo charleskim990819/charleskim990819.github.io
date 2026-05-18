@@ -179,18 +179,79 @@ layout: default
                 {% assign entries = section_entries %}
                 {% include cv/references.liquid %}
               {% else %}
-                <!-- Generic section -->
-                {% for entry in section_entries %}
-                  {% if entry.bullet %}
-                    <ul class="card-text font-weight-light list-group list-group-flush">
-                      <li class="list-group-item">{{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}</li>
-                    </ul>
-                  {% elsif entry.label %}
-                    <div class="card-text font-weight-light">
-                      <strong>{{ entry.label }}:</strong> {{ entry.details }}
-                    </div>
-                  {% endif %}
-                {% endfor %}
+                <!-- Generic section (handles title/organization/date/description schema) -->
+                <ul class="card-text font-weight-light list-group list-group-flush">
+                  {% for entry in section_entries %}
+                    <li class="list-group-item">
+                      <div class="row">
+                        {% if entry.date %}
+                          {% assign date_str = entry.date %}
+                          {% if date_str contains ' to ' %}
+                            {% assign date_parts = date_str | split: ' to ' %}
+                            {% assign date_start_year = date_parts[0] | split: '-' | first %}
+                            {% assign date_end_year = date_parts[1] | split: '-' | first %}
+                            {% if date_start_year == date_end_year %}
+                              {% assign badge_text = date_start_year %}
+                            {% else %}
+                              {% assign badge_text = date_start_year | append: '–' | append: date_end_year %}
+                            {% endif %}
+                          {% else %}
+                            {% assign badge_text = date_str | split: '-' | first %}
+                          {% endif %}
+                          <div class="col-xs-2 col-sm-2 col-md-2 text-center">
+                            <table class="table-cv">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
+                                      {{ badge_text }}
+                                    </span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+                        {% else %}
+                          <div class="col-xs-12 col-sm-12 col-md-12">
+                        {% endif %}
+                          {% if entry.title %}
+                            {% if entry.url %}
+                              <h6 class="title font-weight-bold ml-1 ml-md-4">
+                                <a href="{{ entry.url }}">{{ entry.title }}</a>
+                              </h6>
+                            {% else %}
+                              <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.title }}</h6>
+                            {% endif %}
+                          {% endif %}
+                          {% if entry.organization %}
+                            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.organization }}</h6>
+                          {% elsif entry.awarder %}
+                            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.awarder }}</h6>
+                          {% endif %}
+                          {% if entry.description %}
+                            <p class="ml-1 ml-md-4">{{ entry.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                          {% elsif entry.summary %}
+                            <p class="ml-1 ml-md-4">{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                          {% endif %}
+                          {% if entry.highlights %}
+                            <ul class="ml-1 ml-md-4">
+                              {% for h in entry.highlights %}
+                                <li>{{ h | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                              {% endfor %}
+                            </ul>
+                          {% endif %}
+                          {% if entry.bullet %}
+                            <p class="ml-1 ml-md-4">{{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                          {% endif %}
+                          {% if entry.label %}
+                            <div class="ml-1 ml-md-4"><strong>{{ entry.label }}:</strong> {{ entry.details }}</div>
+                          {% endif %}
+                        </div>
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
               {% endif %}
             </div>
           </div>
