@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2026-05-14 09:00:00+0900
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+First successful **water-transfer of a 4-LED PDA-LM circuit onto skin** (Phase 1 of the water-transfer electronics project).

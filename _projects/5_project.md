@@ -1,80 +1,33 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
+title: AD5941 EC Sensor Toolkit
+description: Portable 4-channel electrochemical sensor based on AD5941 + ESP32-C6
+img: assets/img/6.jpg
+importance: 1
+category: engineering
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## What
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+A **palm-sized, BLE-enabled, 4-channel electrochemical sensor toolkit (STK)** built around the Analog Devices **AD5941** analog front-end and the **ESP32-C6** MCU. Supports cyclic voltammetry (CV), chronoamperometry (CA), electrochemical impedance spectroscopy (EIS), and open-circuit potentiometry (OCP).
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Hardware highlights
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+- **AD5941** analog front-end with internal TIA, DAC, and 16-bit ADC
+- **ESP32-C6** for BLE + Wi-Fi telemetry
+- **External LTC6078 bypass** to AIN3 — a workaround for the AD5941 internal LPTIA latch-up failure mode observed after ~30 s of sustained current (software mitigation alone is insufficient)
+- Custom KiCad layout, optimized BOM, and reduced-footprint stretchable PCB variant in development
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Firmware status
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+| Mode | Status |
+|---|---|
+| Cyclic voltammetry | Phase 1 complete (clean duck-shape on standard ferrocyanide, dEp limited by carbon electrode) |
+| Amperometry | In progress (current focus, May 2026) |
+| OCP / ISE (Na⁺) | Next milestone |
+| EIS | Validated against benchtop potentiostat |
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## DIY screen-printed electrodes
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+A parallel track produces in-house SPEs from SEBS substrates with Dycotec DM-CAP-2100S carbon ink — a low-cost alternative to commercial DRP-110 chips, with the same standard 3-electrode geometry (WE / RE / CE).

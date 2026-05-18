@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2026-05-18 09:00:00+0900
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+Personal academic homepage launched at [charleskim99.com](https://www.charleskim99.com).
