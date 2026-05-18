@@ -1,10 +1,9 @@
 # Social media links for Chansoo (Charles) Kim
-# Fill in the placeholders below with your actual usernames / IDs.
-cv_pdf: # /assets/pdf/charles_kim_cv.pdf  ← upload your CV PDF and uncomment
-email: charleskim990819@gmail.com # ← replace with your preferred contact email
+# Uncomment and fill in lines below as you set up each profile.
+email: charleskim990819@gmail.com
 rss_icon: true
-# scholar_userid:  # ← your Google Scholar ID (e.g., from scholar.google.com/citations?user=XXXXXX)
-# orcid_id:        # ← your ORCID (e.g., 0000-0000-0000-0000)
-# github_username: charleskim990819
-# linkedin_username:  # ← e.g., chansoo-kim
-# researchgate_profile:  # ← researchgate profile slug
+github_username: charleskim990819
+# linkedin_username: chansoo-kim       # uncomment after creating LinkedIn
+# scholar_userid: AAAAAAAAAAA          # uncomment when you have a Google Scholar profile
+# orcid_id: 0000-0000-0000-0000        # uncomment when you have an ORCID
+# researchgate_profile: Chansoo-Kim    # uncomment when you have a ResearchGate
