@@ -169,7 +169,7 @@ Anyone building **wearable bioelectronics, transient electronics, or printable f
 
 ### Roadmap
 
-- ✍️ **Manuscript in preparation** — targeting *Advanced Materials* (Figure 1 mechanism + 4 results figures + SI)
+- ✍️ **Manuscript drafting** — mechanism figure, four results figures, and SI in progress
 - 🤲 **[Water-transfer electronics platform](/projects/2_project/)** — Phase 2 integrating AD5941 + BLE for self-contained skin-mounted biosensing
 - 🧬 **[Wearable BCI](/projects/3_project/)** — using PDA-LM microneedle contacts for ear-EEG
 - 🔬 **Chemistry extensions** — substituting dopamine with other catechol-rich biomolecules (DHCA, gallic acid) to tune mechanical / optical / degradation properties
