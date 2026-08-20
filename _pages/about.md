@@ -101,6 +101,6 @@ I am open to collaborations across materials chemistry, embedded electronics and
 <ul class="ll-contact">
 <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:nce9080@yonsei.ac.kr">nce9080@yonsei.ac.kr</a><span class="ll-contact-tag">Primary</span></li>
 <li><i class="fa-solid fa-envelope-open" aria-hidden="true"></i><a href="mailto:nce9080@gmail.com">nce9080@gmail.com</a><span class="ll-contact-tag">Personal</span></li>
-<li><i class="fa-brands fa-linkedin" aria-hidden="true"></i><a href="https://www.linkedin.com/in/%EC%B0%AC%EC%88%98-%EA%B9%80-46782940b">linkedin.com/in/찬수-김</a><span class="ll-contact-tag">LinkedIn</span></li>
+<li><i class="fa-brands fa-linkedin" aria-hidden="true"></i><a href="https://www.linkedin.com/in/charleskim99">linkedin.com/in/charleskim99</a><span class="ll-contact-tag">LinkedIn</span></li>
 <li><i class="fa-brands fa-github" aria-hidden="true"></i><a href="https://github.com/charleskim990819">@charleskim990819</a><span class="ll-contact-tag">GitHub</span></li>
 </ul>
