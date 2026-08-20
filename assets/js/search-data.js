@@ -48,7 +48,7 @@ ninja.data = [{
               window.location.href = "/projects/2_project/";
             },},{id: "projects-wearable-bci",
           title: 'Wearable BCI',
-          description: "Non-invasive ear-EEG brain-computer interface with PDA-LM microneedle contacts",
+          description: "A direction I want to work in — non-invasive ear-EEG with soft, liquid-metal contacts",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-pdrn-bio-coating",
