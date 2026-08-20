@@ -27,11 +27,10 @@ cv:
         location: Seoul, Republic of Korea
         url: https://bliss.yonsei.ac.kr/
         area: Electrical & Electronic Engineering (Liquid-Metal Electronic Materials track)
-        studyType: M.S. candidate
+        studyType: M.S. student
         start_date: 2025
         end_date: present
         highlights:
-          - "M.S. thesis track; degree expected February 2028"
           - "Advisor: Prof. Jungmok Seo (BLISS Lab)"
           - "Research focus: sintering-free liquid-metal inks, wearable bioelectronics, electrochemical biosensing"
 
@@ -46,6 +45,17 @@ cv:
           - "Bachelor of Science, College of Engineering"
 
     Experience:
+      - company: Yonsei University · School of Electrical & Electronic Engineering
+        position: Supervising Teaching Assistant — Capstone Design (전기전자종합설계)
+        location: Seoul, Republic of Korea
+        start_date: 2026-02
+        end_date: 2026-06
+        summary: >
+          Supervised an undergraduate capstone research team across a full design
+          cycle, from problem definition through prototype and final demonstration.
+          The team was selected as one of eight Outstanding Research Teams in the
+          department.
+
       - company: Yonsei University · School of Electrical & Electronic Engineering
         position: Undergraduate Laboratory Instructor (Teaching Assistant) — Bio-electrical Electronics Lab
         location: Seoul, Republic of Korea
@@ -94,7 +104,8 @@ cv:
         date: 2026-06
         description: Selected as one of eight outstanding capstone research teams,
           serving as the team's supervising teaching assistant. The award carries a
-          teaching-assistant scholarship administered through the Seoul RISE-Y program.
+          teaching-assistant scholarship of KRW 1.25 million administered through the
+          Seoul RISE-Y program.
 
       - title: PTRD Scuba Diving Instructor Certification
         organization: PTRD (2nd cohort, Scholarship Instructor Program)
