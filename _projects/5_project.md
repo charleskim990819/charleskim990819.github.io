@@ -8,6 +8,11 @@ category: engineering
 related_publications: false
 ---
 
+<div class="ll-role">
+<div class="ll-role-k">My role</div>
+<div><p>I am building this instrument myself, working from the published literature on AD5941-based portable potentiostats.</p></div>
+</div>
+
 ## What
 
 A **palm-sized, BLE-enabled, 4-channel electrochemical sensor toolkit (STK)** built around the Analog Devices **AD5941** analog front-end and the **ESP32-C6** MCU. Supports cyclic voltammetry (CV), chronoamperometry (CA), electrochemical impedance spectroscopy (EIS), and open-circuit potentiometry (OCP).

@@ -5,7 +5,7 @@ permalink: /projects/
 description: Ongoing research and engineering projects in liquid-metal electronics, wearable bioelectronics, and electrochemical biosensing.
 nav: true
 nav_order: 3
-display_categories: [research, engineering]
+display_categories: [research, engineering, interests]
 horizontal: false
 ---
 

@@ -8,6 +8,11 @@ category: research
 related_publications: false
 ---
 
+<div class="ll-role">
+<div class="ll-role-k">My role</div>
+<div><p>I ran the EMG recordings and the chemical analysis, and wrote the manuscript. Coating development and the in vivo surgery were done with collaborators.</p></div>
+</div>
+
 ## Motivation
 
 Implantable bio-interfaces face two competing demands: **suppress fouling** (fibrotic encapsulation, biofilm) and **promote tissue regeneration** (vascularization, healing). Most coatings address one or the other.

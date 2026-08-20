@@ -10,6 +10,11 @@ toc:
   sidebar: left
 ---
 
+<div class="ll-role">
+<div class="ll-role-k">My role</div>
+<div><p>I led this project end to end &mdash; ink chemistry, spray processing, electrical and surface characterisation, and the supporting DFT work.</p></div>
+</div>
+
 > **TL;DR** — Conventional liquid-metal (EGaIn) inks need mechanical sintering, organic solvents, or adhesion primers before they become useful conductors. We replaced all three crutches with a single chemistry: **catechol–Ga³⁺ coordination**. The result is a water-based ink that prints, sticks, and conducts in one step.
 
 ---

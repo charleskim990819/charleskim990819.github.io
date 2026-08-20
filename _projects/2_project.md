@@ -8,6 +8,11 @@ category: research
 related_publications: false
 ---
 
+<div class="ll-role">
+<div class="ll-role-k">My role</div>
+<div><p>I led this project end to end, from the ink through the transfer process to the on-skin demonstrator.</p></div>
+</div>
+
 ## Concept
 
 A **PVA-carrier water-transfer process** that hydroprints PDA-LM circuits onto arbitrary surfaces — including human skin — in seconds, **without sintering and without primer**. The carrier dissolves on contact with water, leaving a conformal LM trace that is immediately conductive.

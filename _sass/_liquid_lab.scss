@@ -646,3 +646,38 @@ article > blockquote {
   .card:hover,
   .ll-tile:hover { transform: none; }
 }
+
+/* ============================================================
+   Role box — states who did what on a project page.
+   ============================================================ */
+.ll-role {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: var(--ll-space-2);
+  align-items: start;
+  background: var(--ll-surface);
+  border: 1px solid var(--ll-border);
+  border-left: 3px solid var(--ll-indigo);
+  border-radius: 0 var(--ll-radius-sm) var(--ll-radius-sm) 0;
+  padding: var(--ll-space-2) var(--ll-space-3);
+  margin: 0 0 var(--ll-space-4);
+}
+.ll-role-k {
+  font-family: var(--ll-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ll-fg-faint);
+  padding-top: 3px;
+}
+.ll-role p {
+  margin: 0;
+  font-size: var(--ll-step-0);
+  line-height: 1.6;
+  color: var(--ll-fg);
+  max-width: none;
+}
+.ll-role.is-interest { border-left-color: var(--ll-fg-faint); }
+@media (max-width: 620px) {
+  .ll-role { grid-template-columns: 1fr; gap: 6px; }
+}
