@@ -30,7 +30,10 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "projects-pda-lm-ink",
+        },{id: "news-our-capstone-team-was-selected-as-one-of-eight-outstanding-research-teams-in-electrical-amp-amp-electronic-engineering-where-i-served-as-the-supervising-teaching-assistant",
+          title: 'Our capstone team was selected as one of eight Outstanding Research Teams in...',
+          description: "",
+          section: "News",},{id: "projects-pda-lm-ink",
           title: 'PDA-LM Ink',
           description: "Sintering-free, primer-free liquid-metal ink via catechol–Ga³⁺ chelation — a 10-minute deep dive",
           section: "Projects",handler: () => {
