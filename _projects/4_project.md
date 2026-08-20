@@ -24,6 +24,8 @@ A **two-layer coating** combining:
 1. **PDRN (polydeoxyribonucleotide)** — clinical-grade tissue-regeneration moiety
 2. **Lubricant overlayer** — slip-surface chemistry that physically rejects protein and cellular fouling
 
+{% include figure.liquid path="assets/img/data_pdrn_foldchange.png" class="img-fluid rounded" zoomable=true caption="Electrode–tissue interface after 30 days, as fold change from day 0. The bare electrode degrades on every impedance metric while the coated one stays near unity. This is a single explanted pair, so it shows the direction of the effect rather than its distribution — the group sizes needed to call it are the point of the ongoing study." %}
+
 ## Applications under study
 
 - **Surgical sutures** (chest closure) — accelerate wound healing while preventing biofilm formation

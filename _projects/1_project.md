@@ -138,6 +138,14 @@ Three orthogonal evidence streams:
 - Conductivity verified by lighting the LEDs immediately after transfer
 - No sintering step, no primer step, no organic solvent
 
+### What the measurements show
+
+{% include figure.liquid path="assets/img/data_strain_response.png" class="img-fluid rounded" zoomable=true caption="Resistance change under uniaxial strain. The dashed line is Pouillet's law — what pure geometry predicts for an incompressible conductor being stretched. The printed PDA-LM trace stays far below it out to 500 % strain, so geometry alone does not explain the response." %}
+
+{% include figure.liquid path="assets/img/data_conductivity_substrates.png" class="img-fluid rounded" zoomable=true caption="Conductivity of films printed on four different elastomers, n = 5 each. All four land within the same order of magnitude without a substrate-specific primer step." %}
+
+{% include figure.liquid path="assets/img/data_sem_cross_section.png" class="img-fluid rounded" zoomable=true caption="Cross-sectional SEM of a printed film. The particle layer sits directly on the elastomer surface; scale bar and imaging conditions are burned into the micrograph." %}
+
 ### The evidence stack (for the manuscript)
 
 - 📊 **UV-Vis** — pH-stoichiometry titration matching Holten-Andersen framework

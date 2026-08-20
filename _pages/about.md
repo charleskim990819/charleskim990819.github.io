@@ -18,9 +18,9 @@ profile:
   name: Chansoo (Charles) Kim
   subline: EE · B.S. 2025 · Graduate Researcher 2025–
   stats:
-    - { n: '6',     l: 'Projects' }
-    - { n: '4',     l: 'Areas' }
-    - { n: '2025–', l: 'BLISS Lab' }
+    - { n: 'MRS ’26', l: 'Fall · oral' }
+    - { n: '6',       l: 'Projects' }
+    - { n: '4',       l: 'Areas' }
 
 selected_papers: false
 social: true

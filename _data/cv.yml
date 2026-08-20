@@ -44,6 +44,13 @@ cv:
         highlights:
           - "Bachelor of Science, College of Engineering"
 
+    Presentations:
+      - title: "Fracture-Gated Coalescence for Post-Treatment-Free Liquid Metal Inks in Stretchable Bioelectronics Enabled by Catechol–Gallium Coordination"
+        organization: "2026 MRS Fall Meeting & Exhibit — Symposium SB13 (Advancements in Liquid Metal Science), Session SB13.01 · Boston, MA, USA"
+        date: 2026-11
+        description: Oral presentation; first author and presenting author.
+          Accepted and scheduled for 30 November 2026.
+
     Experience:
       - company: Yonsei University · School of Electrical & Electronic Engineering
         position: Supervising Teaching Assistant — Capstone Design (전기전자종합설계)
