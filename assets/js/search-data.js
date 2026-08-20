@@ -91,7 +91,7 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/%EC%B0%AC%EC%88%98-%EA%B9%80-46782940b", "_blank");
+          window.open("https://www.linkedin.com/in/charleskim99", "_blank");
         },
       },{
       id: 'light-theme',
