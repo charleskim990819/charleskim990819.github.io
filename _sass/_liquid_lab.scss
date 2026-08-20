@@ -48,7 +48,6 @@ code, pre, kbd, samp, .font-mono { font-family: var(--ll-font-mono); }
   border-radius: 50%;
   filter: blur(120px);
   opacity: var(--ll-mesh-opacity);
-  animation: ll-floaty 28s ease-in-out infinite;
 }
 .ll-mesh::before {
   width: 720px; height: 720px;
@@ -189,9 +188,7 @@ html[data-theme="dark"] .ll-display {
   padding: 22px;
   display: flex; flex-direction: column;
   gap: 20px;
-  animation: ll-float-slow 12s ease-in-out infinite;
 }
-@keyframes ll-float-slow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 html[data-theme="dark"] .ll-profile-card {
   box-shadow: 0 24px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06);
 }
@@ -481,4 +478,171 @@ footer .col-sm-12 {
 ::selection {
   background: var(--ll-indigo);
   color: #ffffff;
+}
+
+/* ============================================================
+   Design tokens — single source of truth for new components.
+   Anything built on these inherits the site tone without
+   fighting Bootstrap, so nothing below needs !important.
+   ============================================================ */
+:root {
+  --ll-measure:   68ch;
+  --ll-step-0:    15px;
+  --ll-step-1:    17px;
+  --ll-step-2:    20px;
+  --ll-step-3:    26px;
+  --ll-space-1:   8px;
+  --ll-space-2:   16px;
+  --ll-space-3:   24px;
+  --ll-space-4:   40px;
+  --ll-space-5:   64px;
+  --ll-radius-sm: 12px;
+  --ll-radius:    18px;
+  --ll-radius-lg: 24px;
+}
+
+/* ============================================================
+   Prose measure — body copy was running the full 930px
+   container (~110 characters per line). Cap it near 68.
+   Tables, figures and grids stay full width on purpose.
+   ============================================================ */
+article > p,
+article > ul,
+article > ol,
+article > h3,
+article > h4,
+article > blockquote {
+  max-width: var(--ll-measure);
+}
+
+/* ============================================================
+   Tile grid — "Research interests"
+   ============================================================ */
+.ll-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--ll-space-2);
+  margin: var(--ll-space-3) 0 var(--ll-space-5);
+}
+.ll-tile {
+  background: var(--ll-surface);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid var(--ll-border);
+  border-radius: var(--ll-radius);
+  padding: var(--ll-space-3);
+  transition: border-color .3s, transform .3s;
+}
+.ll-tile:hover {
+  border-color: var(--ll-border-strong);
+  transform: translateY(-2px);
+}
+.ll-tile-kicker {
+  display: block;
+  font-family: var(--ll-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ll-fg-faint);
+  margin-bottom: 10px;
+}
+.ll-tile h4 {
+  font-size: var(--ll-step-1);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--ll-space-1);
+  color: var(--ll-fg);
+}
+.ll-tile p {
+  font-size: var(--ll-step-0);
+  line-height: 1.6;
+  color: var(--ll-fg-muted);
+  margin: 0;
+  max-width: none;
+}
+
+/* ============================================================
+   Numbered threads — "Current work"
+   ============================================================ */
+.ll-threads { margin: var(--ll-space-3) 0 var(--ll-space-5); }
+.ll-thread {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: var(--ll-space-2);
+  padding: var(--ll-space-3) 0;
+  border-top: 1px solid var(--ll-border);
+}
+.ll-thread:last-child { border-bottom: 1px solid var(--ll-border); }
+.ll-thread-n {
+  font-family: var(--ll-font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ll-indigo);
+  padding-top: 5px;
+}
+.ll-thread-body { max-width: var(--ll-measure); }
+.ll-thread-body h4 {
+  font-size: var(--ll-step-2);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--ll-space-1);
+  color: var(--ll-fg);
+}
+.ll-thread-body p {
+  font-size: var(--ll-step-1);
+  line-height: 1.65;
+  color: var(--ll-fg-muted);
+  margin: 0;
+  max-width: none;
+}
+@media (max-width: 680px) {
+  .ll-thread { grid-template-columns: 1fr; gap: var(--ll-space-1); }
+}
+
+/* ============================================================
+   Contact rows — replaces the emoji bullet list
+   ============================================================ */
+.ll-contact {
+  list-style: none;
+  padding: 0;
+  margin: var(--ll-space-3) 0 0;
+  max-width: 560px;
+}
+.ll-contact li {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--ll-space-2);
+  padding: 12px 2px;
+  border-top: 1px solid var(--ll-border);
+  font-size: var(--ll-step-0);
+}
+.ll-contact li:last-child { border-bottom: 1px solid var(--ll-border); }
+.ll-contact i { color: var(--ll-fg-faint); font-size: 14px; }
+.ll-contact a { color: var(--ll-fg); }
+.ll-contact a:hover { color: var(--ll-indigo); }
+.ll-contact .ll-contact-tag {
+  font-family: var(--ll-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ll-fg-faint);
+}
+
+/* ============================================================
+   Motion — the mesh drifts only when the visitor has not asked
+   for reduced motion. The profile card no longer floats at all.
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference) {
+  .ll-mesh::before,
+  .ll-mesh::after,
+  .ll-mesh-blob {
+    animation: ll-floaty 28s ease-in-out infinite;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .ll-tile { transition: none; }
+  .card:hover,
+  .ll-tile:hover { transform: none; }
 }

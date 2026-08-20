@@ -2,7 +2,7 @@
 layout: page
 title: PDRN Bio-Coating
 description: Dual anti-fouling + tissue-regeneration coating for sutures and intramuscular EMG
-img: assets/img/7.jpg
+img: assets/img/proj_pdrn_coating.png
 importance: 4
 category: research
 related_publications: false

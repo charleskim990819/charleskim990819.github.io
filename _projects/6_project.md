@@ -2,7 +2,7 @@
 layout: page
 title: Multimodal Bioelectronics
 description: Combined EC + EMG + neurostim front-end roadmap
-img: assets/img/8.jpg
+img: assets/img/proj_multimodal.png
 importance: 2
 category: engineering
 related_publications: false

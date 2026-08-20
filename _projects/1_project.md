@@ -2,7 +2,7 @@
 layout: page
 title: PDA-LM Ink
 description: Sintering-free, primer-free liquid-metal ink via catechol–Ga³⁺ chelation — a 10-minute deep dive
-img: assets/img/12.jpg
+img: assets/img/proj_pdalm_ink.png
 importance: 1
 category: research
 related_publications: false

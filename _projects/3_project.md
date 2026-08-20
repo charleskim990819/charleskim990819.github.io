@@ -2,7 +2,7 @@
 layout: page
 title: Wearable BCI
 description: Non-invasive ear-EEG brain-computer interface with PDA-LM microneedle contacts
-img: assets/img/5.jpg
+img: assets/img/proj_wearable_bci.png
 importance: 3
 category: research
 related_publications: false

@@ -2,7 +2,7 @@
 layout: page
 title: AD5941 EC Sensor Toolkit
 description: Portable 4-channel electrochemical sensor based on AD5941 + ESP32-C6
-img: assets/img/6.jpg
+img: assets/img/proj_ec_toolkit.png
 importance: 1
 category: engineering
 related_publications: false
