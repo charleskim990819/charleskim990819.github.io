@@ -681,3 +681,25 @@ article > blockquote {
 @media (max-width: 620px) {
   .ll-role { grid-template-columns: 1fr; gap: 6px; }
 }
+
+/* ============================================================
+   CV entries — only the entry title is bold. The organisation
+   line and the summary are ordinary body text; the al-folio
+   templates marked them up as <h6>, which made every line of
+   the CV read as a heading.
+   ============================================================ */
+.cv h6.cv-org,
+.cv h6.cv-summary {
+  font-size: 0.95rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.55;
+  margin-bottom: 4px;
+}
+.cv h6.cv-org { color: var(--ll-fg-muted); }
+.cv h6.cv-summary { color: var(--ll-fg); margin-top: 6px; }
+.cv h6.title { font-size: 1rem; letter-spacing: -0.01em; }
+
+/* the date/location column is narrow — keep its contents inside it */
+.cv .table-cv { width: 100%; table-layout: fixed; }
+.cv .table-cv td { word-break: normal; overflow-wrap: anywhere; }

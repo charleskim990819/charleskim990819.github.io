@@ -21,7 +21,11 @@
             {% comment %} Extract year only from dates like "1933-01-01" or just use "1933" as is {% endcomment %}
             {% assign startDate = start_date | split: '-' | first %}
             {% assign endDate = end_date | split: '-' | first | default: 'Present' %}
-            {% assign date = startDate | append: ' - ' | append: endDate %}
+            {% if startDate == endDate %}
+              {% assign date = startDate %}
+            {% else %}
+              {% assign date = startDate | append: ' - ' | append: endDate %}
+            {% endif %}
           {% else %}
             {% assign date = '' %}
           {% endif %}
@@ -66,11 +70,11 @@
             {% if entry.name %}{{ entry.name }}{% elsif entry.company %}{{ entry.company }}{% elsif entry.organization %}{{ entry.organization }}{% endif %}
           {% endcapture %}
           {% if company_name != '' %}
-            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ company_name }}</h6>
+            <h6 class="cv-org ml-1 ml-md-4">{{ company_name }}</h6>
           {% endif %}
 
           {% if entry.summary %}
-            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">
+            <h6 class="cv-summary ml-1 ml-md-4">
               {{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}
             </h6>
           {% endif %}

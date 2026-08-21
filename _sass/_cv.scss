@@ -44,7 +44,10 @@ a.btncv:hover {
 
 p.location {
   font-size: 0.7rem;
-  white-space: nowrap;
+  line-height: 1.35;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  margin-bottom: 0;
 }
 
 i.iconlocation {

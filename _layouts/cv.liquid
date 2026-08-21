@@ -225,9 +225,9 @@ layout: default
                             {% endif %}
                           {% endif %}
                           {% if entry.organization %}
-                            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.organization }}</h6>
+                            <h6 class="cv-org ml-1 ml-md-4">{{ entry.organization }}</h6>
                           {% elsif entry.awarder %}
-                            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.awarder }}</h6>
+                            <h6 class="cv-org ml-1 ml-md-4">{{ entry.awarder }}</h6>
                           {% endif %}
                           {% if entry.description %}
                             <p class="ml-1 ml-md-4">{{ entry.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
