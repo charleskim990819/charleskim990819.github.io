@@ -41,7 +41,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-pda-lm-ink",
           title: 'PDA-LM Ink',
-          description: "Sintering-free, primer-free liquid-metal ink via catechol–Ga³⁺ chelation — a 10-minute deep dive",
+          description: "Post-treatment-free liquid-metal ink via catechol–Ga³⁺ coordination — a 10-minute deep dive",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-water-transfer-electronics",
@@ -66,7 +66,7 @@ ninja.data = [{
               window.location.href = "/projects/5_project/";
             },},{id: "projects-multimodal-bioelectronics",
           title: 'Multimodal Bioelectronics',
-          description: "Combined EC + EMG + neurostim front-end roadmap",
+          description: "A design concept — one wearable front end for electrochemistry, EMG and stimulation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
             },},{id: "teachings-bio-electrical-electronics-laboratory-바이오전기전자실험",
