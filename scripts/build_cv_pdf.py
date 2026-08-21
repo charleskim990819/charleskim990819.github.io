@@ -111,7 +111,7 @@ def build_html(cv):
             entry_block(
                 date_range(e["start_date"], e["end_date"]),
                 f'{esc(e["studyType"])}, {esc(e["area"])}',
-                f'{esc(e["institution"])} · {esc(e["location"])}',
+                esc(e["institution"]),
                 f"<ul>{bullets}</ul>",
             )
         )
@@ -123,7 +123,7 @@ def build_html(cv):
             entry_block(
                 date_range(e["start_date"], e["end_date"]),
                 esc(e["position"]),
-                f'{esc(e["company"])} · {esc(e["location"])}',
+                esc(e["company"]),
                 f'<p>{md(e["summary"].strip())}</p>',
             )
         )
