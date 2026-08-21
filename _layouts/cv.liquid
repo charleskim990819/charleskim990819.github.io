@@ -198,7 +198,7 @@ layout: default
                           {% else %}
                             {% assign badge_text = date_str | split: '-' | first %}
                           {% endif %}
-                          <div class="col-xs-2 col-sm-2 col-md-2 text-center">
+                          <div class="cv-date-col">
                             <table class="table-cv">
                               <tbody>
                                 <tr>
@@ -211,28 +211,28 @@ layout: default
                               </tbody>
                             </table>
                           </div>
-                          <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+                          <div class="cv-body-col">
                         {% else %}
                           <div class="col-xs-12 col-sm-12 col-md-12">
                         {% endif %}
                           {% if entry.title %}
                             {% if entry.url %}
-                              <h6 class="title font-weight-bold ml-1 ml-md-4">
+                              <h6 class="title font-weight-bold">
                                 <a href="{{ entry.url }}">{{ entry.title }}</a>
                               </h6>
                             {% else %}
-                              <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.title }}</h6>
+                              <h6 class="title font-weight-bold">{{ entry.title }}</h6>
                             {% endif %}
                           {% endif %}
                           {% if entry.organization %}
-                            <h6 class="cv-org ml-1 ml-md-4">{{ entry.organization }}</h6>
+                            <h6 class="cv-org">{{ entry.organization }}</h6>
                           {% elsif entry.awarder %}
-                            <h6 class="cv-org ml-1 ml-md-4">{{ entry.awarder }}</h6>
+                            <h6 class="cv-org">{{ entry.awarder }}</h6>
                           {% endif %}
                           {% if entry.description %}
-                            <p class="ml-1 ml-md-4">{{ entry.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                            <p class="cv-summary">{{ entry.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
                           {% elsif entry.summary %}
-                            <p class="ml-1 ml-md-4">{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                            <p class="cv-summary">{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
                           {% endif %}
                           {% if entry.highlights %}
                             <ul class="ml-1 ml-md-4">
@@ -242,7 +242,7 @@ layout: default
                             </ul>
                           {% endif %}
                           {% if entry.bullet %}
-                            <p class="ml-1 ml-md-4">{{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                            <p class="cv-summary">{{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}</p>
                           {% endif %}
                           {% if entry.label %}
                             <div class="ml-1 ml-md-4"><strong>{{ entry.label }}:</strong> {{ entry.details }}</div>

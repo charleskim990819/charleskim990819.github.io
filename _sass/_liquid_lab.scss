@@ -700,6 +700,18 @@ article > blockquote {
 .cv h6.cv-summary { color: var(--ll-fg); margin-top: 6px; }
 .cv h6.title { font-size: 1rem; letter-spacing: -0.01em; }
 
-/* the date/location column is narrow — keep its contents inside it */
-.cv .table-cv { width: 100%; table-layout: fixed; }
-.cv .table-cv td { word-break: normal; overflow-wrap: anywhere; }
+/* Entry layout: a compact date rail, everything else full width.
+   The location line is gone, so the left column only holds a date badge —
+   it no longer needs a sixth of the page. */
+.cv .row { display: flex; flex-wrap: wrap; align-items: flex-start; }
+.cv-date-col {
+  flex: 0 0 104px;
+  max-width: 104px;
+  padding-right: var(--ll-space-2);
+}
+.cv-body-col { flex: 1 1 0; min-width: 0; }
+.cv .table-cv { width: auto; }
+.cv .badge { white-space: nowrap; }
+@media (max-width: 576px) {
+  .cv-date-col { flex: 0 0 100%; max-width: 100%; padding-right: 0; margin-bottom: 6px; }
+}
