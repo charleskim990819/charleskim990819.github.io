@@ -23,8 +23,10 @@
             {% assign endDate = end_date | split: '-' | first | default: 'Present' %}
             {% if startDate == endDate %}
               {% assign date = startDate %}
+            {% elsif endDate == 'Present' %}
+              {% assign date = startDate | append: '–' %}
             {% else %}
-              {% assign date = startDate | append: ' - ' | append: endDate %}
+              {% assign date = startDate | append: '–' | append: endDate %}
             {% endif %}
           {% else %}
             {% assign date = null %}
@@ -35,7 +37,7 @@
               <tr>
                 <td>
                   {% if date %}
-                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ date }}</span>
+                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle">{{ date }}</span>
                   {% endif %}
                 </td>
               </tr>

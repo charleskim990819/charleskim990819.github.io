@@ -705,13 +705,31 @@ article > blockquote {
    it no longer needs a sixth of the page. */
 .cv .row { display: flex; flex-wrap: wrap; align-items: flex-start; }
 .cv-date-col {
-  flex: 0 0 104px;
-  max-width: 104px;
+  flex: 0 0 84px;
+  max-width: 84px;
   padding-right: var(--ll-space-2);
 }
 .cv-body-col { flex: 1 1 0; min-width: 0; }
 .cv .table-cv { width: auto; }
-.cv .badge { white-space: nowrap; }
+
+/* The date was a Bootstrap pill: its own padding pushed a range like
+   "2025 - PRESENT" past the column and clipped it. Plain mono text in the
+   site's own voice is narrower and cannot overflow. */
+.cv-date-col .badge {
+  display: inline;
+  background: none !important;
+  padding: 0;
+  min-width: 0;
+  border-radius: 0;
+  font-family: var(--ll-font-mono);
+  font-size: 11px;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  color: var(--ll-indigo) !important;
+  white-space: nowrap;
+}
 @media (max-width: 576px) {
-  .cv-date-col { flex: 0 0 100%; max-width: 100%; padding-right: 0; margin-bottom: 6px; }
+  .cv-date-col { flex: 0 0 100%; max-width: 100%; padding-right: 0; margin-bottom: 4px; }
+  .cv-date-col .badge { white-space: normal; }
 }
