@@ -6,7 +6,7 @@ cv:
   image: ""
   summary: >
     Graduate researcher at Yonsei University (BLISS Lab, Prof. Jungmok Seo) developing
-    sintering-free liquid-metal inks, wearable bioelectronics, and miniaturized
+    post-treatment-free liquid-metal inks, wearable bioelectronics, and miniaturized
     electrochemical sensor toolkits. Bridging materials chemistry, embedded firmware,
     and biointerface engineering.
 
@@ -32,7 +32,7 @@ cv:
         end_date: present
         highlights:
           - "Advisor: Prof. Jungmok Seo (BLISS Lab)"
-          - "Research focus: sintering-free liquid-metal inks, wearable bioelectronics, electrochemical biosensing"
+          - "Research focus: post-treatment-free liquid-metal inks, wearable bioelectronics, electrochemical biosensing"
 
       - institution: Yonsei University
         location: Seoul, Republic of Korea
@@ -131,7 +131,7 @@ cv:
     Research Areas:
       - title: Liquid-Metal Materials
         summary: >
-          Catechol-Ga³⁺ chelation chemistry for sintering-free, primer-free EGaIn inks
+          Catechol-Ga³⁺ coordination chemistry for post-treatment-free EGaIn inks
           (PDA-LM). DFT (ORCA r2SCAN-3c) studies of amorphous Ga₂O₃ surface adhesion.
       - title: Wearable Bioelectronics
         summary: >

@@ -40,7 +40,7 @@ latest_posts:
 <div class="ll-tile">
 <span class="ll-tile-kicker">Materials</span>
 <h4>Stretchable conductors</h4>
-<p>Catechol–Ga³⁺ coordination chemistry for liquid-metal inks that adhere and percolate without sintering or primer; water-transfer printing of those inks onto skin and elastomer; DFT and MD studies of the gallium-oxide surface that makes all of it difficult.</p>
+<p>Catechol–Ga³⁺ coordination chemistry for post-treatment-free liquid-metal inks that adhere and percolate in a single step; water-transfer printing of those inks onto skin and elastomer; DFT and MD studies of the gallium-oxide surface that makes all of it difficult.</p>
 </div>
 <div class="ll-tile">
 <span class="ll-tile-kicker">Electrochemistry</span>

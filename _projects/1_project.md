@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PDA-LM Ink
-description: Sintering-free, primer-free liquid-metal ink via catechol–Ga³⁺ chelation — a 10-minute deep dive
+description: Post-treatment-free liquid-metal ink via catechol–Ga³⁺ coordination — a 10-minute deep dive
 img: assets/img/proj_pdalm_ink.png
 importance: 1
 category: research
@@ -15,7 +15,7 @@ toc:
 <div><p>I led this project end to end &mdash; ink chemistry, spray processing, electrical and surface characterisation, and the supporting DFT work.</p></div>
 </div>
 
-> **TL;DR** — Conventional liquid-metal (EGaIn) inks need mechanical sintering, organic solvents, or adhesion primers before they become useful conductors. We replaced all three crutches with a single chemistry: **catechol–Ga³⁺ coordination**. The result is a water-based ink that prints, sticks, and conducts in one step.
+> **TL;DR** — Conventional liquid-metal (EGaIn) inks need mechanical sintering, organic solvents, or adhesion primers before they become useful conductors. A single chemistry — **catechol–Ga³⁺ coordination** — removes all three, by gating particle coalescence on fracture rather than on an added processing step. The result is a water-based, **post-treatment-free** ink that prints, sticks and conducts in one go.
 
 ---
 
@@ -89,6 +89,12 @@ The pattern: every prior approach **trades off one problem for another**. Nobody
 {% endtab %}
 
 {% tab pdalm-story 💡 Our pivot %}
+
+### The framing, in one phrase
+
+**Fracture-gated coalescence.** Two EGaIn particles can only merge where the oxide shell between them has broken. What the catechol chemistry changes is what happens in the instant after that break: the freshly exposed gallium is capped by coordination instead of immediately regrowing an oxide, so the fracture becomes a conductive junction rather than a new barrier. Coalescence is gated by fracture, not driven by an added sintering step — which is what makes the process **post-treatment-free**.
+
+This is the framing I am presenting at the [2026 MRS Fall Meeting](https://www.mrs.org/meetings-events/fall-meetings-exhibits) (Symposium SB13, 30 November 2026).
 
 ### The chemistry, in one paragraph
 
