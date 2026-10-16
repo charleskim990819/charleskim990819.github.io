@@ -69,6 +69,11 @@ ninja.data = [{
           description: "A design concept — one wearable front end for electrochemistry, EMG and stimulation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
+            },},{id: "projects-stk-revm20-electrochemical-hardware",
+          title: 'STK RevM20 electrochemical hardware',
+          description: "Simultaneous 3CA and pH on a four-layer FPC, with a traceable requirements baseline, preliminary error budget and validation plan",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/stk-revm20/";
             },},{id: "teachings-bio-electrical-electronics-laboratory-바이오전기전자실험",
           title: 'Bio-electrical Electronics Laboratory (바이오전기전자실험)',
           description: "Teaching assistant for the undergraduate hands-on laboratory course on biopotential acquisition, electrochemical sensing, and embedded data acquisition.",
