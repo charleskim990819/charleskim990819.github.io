@@ -84,7 +84,7 @@ horizontal: false
           <i class="fab fa-github text-muted"></i>&nbsp;
           <a href="https://github.com/charleskim990819/charleskim990819.github.io/tree/main/docs/projects/stk-revm20" target="_blank" rel="noopener">STK RevM20 engineering records</a>
         </h5>
-        <p class="card-text">Requirements, preliminary error budget and validation matrix for a simultaneous electrochemical FPC instrument. CAD evidence, calculations and pending physical tests are tracked separately.</p>
+        <p class="card-text">Design choices and verification for a three-channel current and pH front end on four-layer FPC.</p>
         <p><a href="/projects/stk-revm20/">Read the hardware case study &rarr;</a></p>
         <p class="text-muted small mb-0">Mixed-signal hardware · FPC · Measurement validation</p>
       </div>

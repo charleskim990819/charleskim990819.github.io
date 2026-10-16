@@ -276,179 +276,98 @@ def snapshot_evidence(release):
 
 
 def write_overview(d):
-    (ROOT/'README.md').write_text('''# STK RevM20 electrochemical hardware design
+    (ROOT/'README.md').write_text('''# STK RevM20 sensor front end
 
-RevM20 is a compact four-layer FPC instrument design for simultaneous three-channel chronoamperometry and pH sensing in a shared electrochemical cell. It uses discrete continuous TIAs, a simultaneous current ADC and a separate selected-channel voltage path for experimental EIS.
+**3 current channels + pH · Four-layer FPC · 41.8 × 42.5 mm**
 
-**Stage:** CAD and source review completed; manufacturer CAM/placement acceptance and physical characterization pending. No RevM20 measured current accuracy, noise floor, EIS phase accuracy or battery lifetime is claimed.
+A mixed-signal prototype combining continuous current measurement, a high-impedance pH input and USB-C acquisition.
 
-## Engineering records
+**Stage:** CAD/source review complete. Manufacturer review and bench validation pending.
 
-- [Requirements and implementation baseline](requirements.md)
-- [Preliminary error budget and reproducible calculations](error-budget.md)
-- [Validation matrix and measurement record requirements](validation.md)
-- [Design evidence and release hashes](evidence/README.md)
-- [한국어 요약](README.ko.md)
+![System architecture](../../../assets/projects/stk-revm20/architecture.svg)
 
-The website case study and these tables share the same generated dataset. Accuracy targets marked TBD require an explicit requirement before a physical result can receive a qualification pass.
+## Key design decisions
 
-## System architecture
+- **Acquisition and coupling.** Continuous TIAs and simultaneous ADC sampling preserve channel timing. Shared RE/CE saves connections, with electrical and chemical crosstalk left for measurement.
+- **Precision and sourcing.** The ADG704 substitution was checked for pin/control compatibility. Leakage, on-resistance, resistor tolerance and reference errors drive the per-range calibration plan.
+- **Layout and assembly.** GND/power continuity, high-impedance inputs and USB routing were reviewed. Double-sided FPC assembly requires fixture, reflow and USB mechanical-support review.
 
-```mermaid
-flowchart LR
-  CELL[Shared electrolyte: WE1..3, pH, RE, CE]
-  CELL --> SW[Global cell isolation]
-  SW --> TIA[OPA2320 continuous TIAs]
-  MUX[ADG704 feedback range per TIA] --- TIA
-  TIA --> DIV[0.5 differential conditioning]
-  CELL --> PH[OPA391 pH buffer]
-  PH --> DIV
-  DIV --> ADC[ADS131M04 simultaneous ADC]
-  ADC --> MCU[ESP32-S3 / USB Serial]
-  MCU --> DAC[DAC80508 setpoints]
-  DAC --> TIA
-  CELL --> RE[OPA391 reference buffer]
-  RE --> CE[Shared OPA2320 CE loop]
-  CE --> CELL
-  CELL --> VB[Buffered electrode voltages]
-  VB --> VADC[ADS124S06 selected voltage: EIS only in FW18]
-  VADC --> MCU
-```
+## Verification
 
-## Design decisions and their consequences
+**CAD evidence:** 0 DRC/ERC violations and 0 unconnected items under the configured checks; BOM/placement matching for 196 fitted parts. [Audit scope and exclusions](evidence/README.md).
 
-**Continuous paths and shared electrodes.** Separate TIAs and a simultaneous ADC support same-time current acquisition. A shared RE/CE reduces electrode connections, while retaining common-cell electrical and chemical coupling. Global CELL_EN also means independent live per-WE disconnect is outside this revision's scope. The validation matrix separates these limitations from measurable transfer/noise performance.
+**Next:** factory review → USB-only bring-up → dummy-cell accuracy, noise and crosstalk tests. Reset/startup and selected-channel EIS still need physical validation. No measured accuracy is claimed.
 
-**A procurement-driven switch substitution.** U21-U24 use ADG704BRMZ-REEL7 in place of unavailable TMUX1104DGSR. Pin mapping, truth table, logic thresholds and control-rail behavior were reviewed. On-resistance, leakage, capacitance and charge injection change the precision and settling problem; per-range calibration and physical residual characterization remain required.
+## Engineering detail
 
-**Compact flex with manufacturing constraints.** The nominal41.8x42.5mm,0.20mm four-layer board has196 fitted parts on both faces. Connected GND/power routing, coverlay/paste geometry and BOM/CPL alignment were audited. Assembly fixtures, reflow sequence, placement acceptance, USB retention and populated-area support remain manufacturing/mechanical work. A flexible board does not establish stretchable-system performance.
+[Requirements](requirements.md) · [Error budget](error-budget.md) · [Validation plan](validation.md) · [한국어](README.ko.md)
 
-## Current evidence boundary
+The detailed tables retain 26 requirements, 18 error terms and 25 validation groups. Calculations and evidence labels share one baseline; 22 physical test groups remain unrun.
 
-The release records0 DRC errors,0 warnings and0 unconnected items under its enabled rules,0 ERC violations and matching202 component references/687 physical pads. Ignored check classes are retained in the evidence summary. These are CAD outcomes. The physical tests in the matrix are NOT_RUN, and quantities without measurements use null values.
+Design baseline: RevM20 / FW18, 15 October 2026. The [earlier AD5941 toolkit](https://www.charleskim99.com/projects/5_project/) is a separate architecture.
 
-Default operation is3CA+pH. Four-current operation requires unpowered physical selector changes. The implemented firmware does not provide CV/DPV, wireless telemetry, automatic battery charging policy or qualified EIS accuracy. Historical AD5941 results on the personal site belong to the earlier architecture.
-
-## Reproduce the documentation
-
-The portable calculations require only Python3:
-
-```bash
-python3 docs/projects/stk-revm20/tools/build.py --check
-```
-
-To regenerate the hash-bound source index and pages from the matching private release, use `--release /path/to/release`. The script refuses a mismatched PCB hash. Website and Markdown tables are generated from one baseline. The full board source and procurement/account information are outside this publication.
+Reproduce the calculations with `python3 docs/projects/stk-revm20/tools/build.py --check`. Regeneration with `--release /path/to/release` verifies the PCB hash before rebuilding the records and summary. Full CAD/firmware and procurement/account data are outside this publication.
 ''')
-    (ROOT/'README.ko.md').write_text('''# STK RevM20 하드웨어 포트폴리오
+    (ROOT/'README.ko.md').write_text('''# STK RevM20 센서 프런트엔드
 
-현재 설계는 공통 RE/CE에서3개 전류 채널과pH를 동시에 기록하는4층 FPC 시제품이다. RevM20의 실측 정확도·잡음·검출한계·EIS 위상·배터리 수명은 아직 측정하지 않았다.
+**전류 3채널 + pH · 4층 FPC · 41.8 × 42.5 mm**
 
-## 세 가지 표
+연속 전류 측정, 고입력 임피던스 pH 입력, USB-C 수집을 결합한 시제품 설계다. CAD·코드 검토를 마쳤으며 제조사 검토와 실측은 남아 있다.
 
-- [요구사양표](requirements.md): 현재 구현 기준과 미정 성능 목표를 구분한다. 펌웨어 명령 범위와 보호 제한은 실제 달성 범위·정확도 보증이 아니다.
-- [오차 예산표](error-budget.md): 저항 허용오차, 스위치 누설·온저항, TIA 오프셋, 분압 불일치, ADC/DAC, 공통 기준전압, 용액 저항을 분리한다. 미확정 항목은0으로 합산하지 않는다.
-- [검증 항목표](validation.md): 기존 CAD 감사 검토와 앞으로 수행할 물리 시험을 구분한다. 요구사양 ID와 시험 ID가 서로 연결된다.
+## 핵심 설계 판단
 
-## 상태 표기
+- **동시 측정과 채널 간섭:** 연속 TIA와 동시 ADC를 사용했다. 공통 RE/CE는 연결 수를 줄이지만 전기적·화학적 간섭을 실측해야 한다.
+- **정밀도와 부품 조달:** ADG704 대체품의 핀·제어 호환성을 검토했다. 누설·온저항·저항 허용오차·기준전압 오차를 분리하고 범위별 교정 계획에 반영했다.
+- **배치·배선과 제조:** GND·전원 연속성, 고임피던스 입력, USB 경로를 검토했다. 양면 FPC의 지그·리플로와 USB 기계적 지지는 제조 검토 항목이다.
 
-CAD_CONFIRMED는 CAD/감사 자료에서 확인, FW_CONFIRMED는 코드 검토로 확인, CALCULATED는 명시된 모델의 계산, DATASHEET는 제조사 지정 조건의 부품 사양이다. BENCH_PENDING은 실측 대기, MANUFACTURER_PENDING은 제조사 검토 대기, UNSPECIFIED는 수치 기준 미정이다. 제조사 승인이나 실물 성능을 대신하지 않는다.
+**확인한 근거:** 설정된 검사에서 DRC/ERC 위반·미연결 0, 실장 부품 196개의 BOM·좌표 대조. 제외 규칙은 [근거 자료](evidence/README.md)에 기록했다.
 
-## 강조할 설계 판단
+**다음 단계:** 제조 검토 → 배터리·센서 없는 USB 전원 투입 → 더미 셀 정확도·잡음·간섭 측정. 리셋·시동과 선택 채널 EIS도 실측 대상이다. 측정 성능은 아직 주장하지 않는다.
 
-연속 TIA와 동시 ADC, 공통 RE/CE의 결합과 개별 차단 제약, 재고 부족에 따른 ADG704 교체의 정밀도 영향, 양면 FPC의 전원·GND·제조 제약을 설명한다. 다음 단계에서는 수치화된 최소 전류·허용 오차·환경 조건을 정하고, 효소 없는 부하 시험과 단일 분석물 첨가 시험을 분리해 검증한다.
+[요구사양표](requirements.md) · [오차 예산표](error-budget.md) · [검증 항목표](validation.md)
 
-프로젝트 기여 범위는 실제 담당한 요구사항 정의·회로 판단·CAD·펌웨어·시험 작업에 맞춰 설명한다. 자동화/AI를 사용한 검토와 본인이 직접 수행한 계측·판단을 구분하며, 아직 수행하지 않은 시험을 완료했다고 기재하지 않는다.
+RevM20 / FW18, 2026-10-15 설계 기준. 포트폴리오의 개인 기여와 실측 결과는 실제 수행한 범위에 맞춰 설명한다.
 ''')
 
 
 def write_site(d, tables):
-    req,budget,val,ranges=tables
     asset=SITE/'assets/projects/stk-revm20'
     asset.mkdir(parents=True,exist_ok=True)
     shutil.copy2(ROOT/'data/baseline.json',asset/'baseline.json')
     for name in ['requirements.md','error-budget.md','validation.md']:
         shutil.copy2(ROOT/name,asset/name)
-    def wrap(text):
-        return '<div class="table-responsive" markdown="1">\n\n'+text+'\n</div>\n'
     page='''---
 layout: page
-title: STK RevM20 electrochemical hardware
-description: Simultaneous 3CA and pH on a four-layer FPC, with a traceable requirements baseline, preliminary error budget and validation plan
+title: STK RevM20 sensor front end
+description: Simultaneous electrochemical sensing on a compact four-layer flex PCB
 permalink: /projects/stk-revm20/
 img: assets/projects/stk-revm20/architecture.svg
 importance: 0
 category: engineering
 related_publications: false
-toc:
-  sidebar: left
 ---
 
-**RevM20 / FW18 · Design baseline as of 15 October 2026**
+**Prototype · 3 current channels + pH · 4-layer FPC · 41.8 × 42.5 mm**
 
-This instrument design records three electrochemical current channels and pH simultaneously in a shared cell. Its continuous TIAs and simultaneous ADC support same-time acquisition; a common RE/CE retains electrical and chemical coupling that must be characterized.
+## Key design decisions
 
-> **Current stage:** CAD/source review and manufacturing-file preparation. Factory CAM/placement acceptance and physical characterization are pending. Current accuracy, noise floor, EIS phase accuracy and battery lifetime are not measured results.
+- **Acquisition and coupling.** Continuous TIAs and simultaneous ADC sampling preserve channel timing. Shared RE/CE saves connections, with electrical and chemical crosstalk left for measurement.
+- **Precision and sourcing.** The ADG704 substitution was checked for pin/control compatibility. Leakage, on-resistance, resistor tolerance and reference errors drive the per-range calibration plan.
+- **Layout and assembly.** GND/power continuity, high-impedance inputs and USB routing were reviewed. Double-sided FPC assembly requires fixture, reflow and USB mechanical-support review.
 
-<p><a class="btn btn-sm btn-outline-primary" href="DOC_URL">GitHub engineering records</a> <a class="btn btn-sm btn-outline-primary" href="ASSET/baseline.json">Download data</a> <a class="btn btn-sm btn-outline-primary" href="DOC_URL/README.ko.md">한국어 요약</a></p>
+<img src="ASSET/architecture.svg" alt="STK RevM20: continuous TIAs and pH buffer, simultaneous ADC, DAC setpoints and ESP32-S3 USB acquisition" class="img-fluid rounded">
 
-## Architecture and design choices
+## Verification and next step
 
-<img src="ASSET/architecture.svg" alt="RevM20 architecture: shared RE and CE, continuous TIAs, simultaneous current ADC and selected-channel EIS voltage ADC" class="img-fluid rounded" loading="lazy">
+**CAD evidence:** 0 DRC/ERC violations and 0 unconnected items under the configured checks; BOM/placement matching for 196 fitted parts. [Audit scope and exclusions](DOC_URL/evidence).
 
-The default physical links implement **3CA+pH**. Four-current mode requires selector changes with power removed. The41.8×42.5mm board uses four copper layers and nominal0.20mm FPC with196 fitted components on both sides.
+**Next:** factory review → USB-only bring-up → dummy-cell accuracy, noise and crosstalk tests. Reset/startup and selected-channel EIS still need physical validation. No measured accuracy is claimed.
 
-**Acquisition architecture.** Each current channel has an OPA2320 TIA. ADG704 switches select feedback ranges within each TIA; they do not multiplex a single current amplifier between electrodes. The ADS131M04 samples four conversion channels simultaneously. The ADS124S06 voltage path serves a selected EIS channel in current firmware.
+[Requirements](DOC_URL/requirements.md) · [Error budget](DOC_URL/error-budget.md) · [Validation plan](DOC_URL/validation.md) · [한국어](DOC_URL/README.ko.md)
 
-**Procurement and precision.** Replacing the unavailable TMUX1104 with ADG704 preserved the reviewed pin mapping and control truth table. Leakage, on-resistance, charge injection and capacitance remain explicit error/settling contributors. Per-range calibration is an interface ready for physical characterization, not an already achieved accuracy result.
-
-**Shared-cell limits.** One RE/CE pair and global CELL_EN keep the topology compact. One channel's reaction can still affect others through solution impedance or transported products. Live per-channel disconnect and live range/bias changes are outside FW18's implemented behavior.
-
-**Manufacturing and mechanics.** Hash-bound CAD audits cover connectivity, enabled design rules, coverlay/paste geometry and BOM/placement parity. Factory approval, FPC fixtures/reflow, USB shell retention and populated-area support remain separate gates. FPC bendability does not demonstrate stretchability.
-
-## Evidence labels
-
-LEGEND
-
-**Validation status:** 22 physical test groups have not been run; one manufacturer review gate awaits disposition. Two rows below review existing CAD audits. No numerical pass is assigned while its acceptance threshold is TBD.
-
-## Requirements and implementation baseline
-
-The table records the current implementation. Minimum quantitative current, absolute accuracy, environmental limits and lifetime still need numerical requirements.
-
-REQ
-
-## Preliminary error budget
-
-Separate bounded offsets, multiplicative gain errors, typical noise and correlated reference terms. Unknown post-calibration residuals remain unknown; there is no justified total accuracy or detection limit yet.
-
-BUDGET
-
-### Reproducible range calculations
-
-The DC model is the parallel combination of(Rselected+3ohm) and10Mohm. Passive-resistor and Ron bounds vary different inputs separately. The resistor-noise estimate assumes25C and an ideal DC feedback resistance; ADC code steps are not measured resolution.
-
-RANGES
-
-A hypothetical1nA signal at1% error permits10pA total error. That is an illustrative requirement, not this board's achieved specification. The ADG704 specified100pA terminal leakage limit makes actual leakage and calibration residual characterization essential for such a target.
-
-## Validation matrix
-
-Begin with assembly/link inspection and USB-only power-up. Proceed through dummy-cell transfer/stability, noise and electrical coupling before enzyme controls. Each measurement must retain board/FW identity, configuration, calibration fingerprint, environment, instruments, uncertainty and raw data.
-
-VAL
-
-## Engineering records and next measurements
-
-The release records0 DRC errors,0 warnings,0 unconnected items and0 ERC violations under its configured checks, with202 references and687 pads checked for schematic parity. The [evidence summary](DOC_URL/evidence) retains ignored rule classes and source hashes. These are CAD outcomes.
-
-The next quantitative milestone is an independently validated DC current/voltage transfer and noise/crosstalk characterization across the declared operating conditions. EIS remains labeled EIS_ACTUAL_UNVERIFIED. Sample temperature is manual input; battery NTC is not sample-temperature measurement.
-
-The [earlier AD5941 toolkit](/projects/5_project/) uses a different front end and MCU. Its historical mode/status claims do not establish RevM20 performance.
-
-Full tables: [requirements](ASSET/requirements.md), [error budget](ASSET/error-budget.md), [validation](ASSET/validation.md). The [GitHub source index](DOC_URL/evidence/README.md) links manufacturer datasheets and identifies the matching release artifacts.
+<small>RevM20 / FW18 · Design baseline: 15 October 2026 · <a href="/projects/5_project/">Earlier AD5941 toolkit</a></small>
 '''
-    page=page.replace('DOC_URL',DOC_URL).replace('ASSET',ASSET).replace('LEGEND',LEGEND).replace('REQ\n',wrap(req)).replace('BUDGET\n',wrap(budget)).replace('RANGES\n',wrap(ranges)).replace('VAL\n',wrap(val))
-    (SITE/'_projects/stk-revm20.md').write_text(page)
+    (SITE/'_projects/stk-revm20.md').write_text(page.replace('DOC_URL',DOC_URL).replace('ASSET',ASSET))
 
 
 def check(d):
