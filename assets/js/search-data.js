@@ -69,9 +69,9 @@ ninja.data = [{
           description: "A design concept — one wearable front end for electrochemistry, EMG and stimulation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-stk-revm20-electrochemical-hardware",
-          title: 'STK RevM20 electrochemical hardware',
-          description: "Simultaneous 3CA and pH on a four-layer FPC, with a traceable requirements baseline, preliminary error budget and validation plan",
+            },},{id: "projects-stk-revm20-sensor-front-end",
+          title: 'STK RevM20 sensor front end',
+          description: "Simultaneous electrochemical sensing on a compact four-layer flex PCB",
           section: "Projects",handler: () => {
               window.location.href = "/projects/stk-revm20/";
             },},{id: "teachings-bio-electrical-electronics-laboratory-바이오전기전자실험",

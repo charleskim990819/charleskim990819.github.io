@@ -1,62 +1,31 @@
-# STK RevM20 electrochemical hardware design
+# STK RevM20 sensor front end
 
-RevM20 is a compact four-layer FPC instrument design for simultaneous three-channel chronoamperometry and pH sensing in a shared electrochemical cell. It uses discrete continuous TIAs, a simultaneous current ADC and a separate selected-channel voltage path for experimental EIS.
+**3 current channels + pH · Four-layer FPC · 41.8 × 42.5 mm**
 
-**Stage:** CAD and source review completed; manufacturer CAM/placement acceptance and physical characterization pending. No RevM20 measured current accuracy, noise floor, EIS phase accuracy or battery lifetime is claimed.
+A mixed-signal prototype combining continuous current measurement, a high-impedance pH input and USB-C acquisition.
 
-## Engineering records
+**Stage:** CAD/source review complete. Manufacturer review and bench validation pending.
 
-- [Requirements and implementation baseline](requirements.md)
-- [Preliminary error budget and reproducible calculations](error-budget.md)
-- [Validation matrix and measurement record requirements](validation.md)
-- [Design evidence and release hashes](evidence/README.md)
-- [한국어 요약](README.ko.md)
+![System architecture](../../../assets/projects/stk-revm20/architecture.svg)
 
-The website case study and these tables share the same generated dataset. Accuracy targets marked TBD require an explicit requirement before a physical result can receive a qualification pass.
+## Key design decisions
 
-## System architecture
+- **Acquisition and coupling.** Continuous TIAs and simultaneous ADC sampling preserve channel timing. Shared RE/CE saves connections, with electrical and chemical crosstalk left for measurement.
+- **Precision and sourcing.** The ADG704 substitution was checked for pin/control compatibility. Leakage, on-resistance, resistor tolerance and reference errors drive the per-range calibration plan.
+- **Layout and assembly.** GND/power continuity, high-impedance inputs and USB routing were reviewed. Double-sided FPC assembly requires fixture, reflow and USB mechanical-support review.
 
-```mermaid
-flowchart LR
-  CELL[Shared electrolyte: WE1..3, pH, RE, CE]
-  CELL --> SW[Global cell isolation]
-  SW --> TIA[OPA2320 continuous TIAs]
-  MUX[ADG704 feedback range per TIA] --- TIA
-  TIA --> DIV[0.5 differential conditioning]
-  CELL --> PH[OPA391 pH buffer]
-  PH --> DIV
-  DIV --> ADC[ADS131M04 simultaneous ADC]
-  ADC --> MCU[ESP32-S3 / USB Serial]
-  MCU --> DAC[DAC80508 setpoints]
-  DAC --> TIA
-  CELL --> RE[OPA391 reference buffer]
-  RE --> CE[Shared OPA2320 CE loop]
-  CE --> CELL
-  CELL --> VB[Buffered electrode voltages]
-  VB --> VADC[ADS124S06 selected voltage: EIS only in FW18]
-  VADC --> MCU
-```
+## Verification
 
-## Design decisions and their consequences
+**CAD evidence:** 0 DRC/ERC violations and 0 unconnected items under the configured checks; BOM/placement matching for 196 fitted parts. [Audit scope and exclusions](evidence/README.md).
 
-**Continuous paths and shared electrodes.** Separate TIAs and a simultaneous ADC support same-time current acquisition. A shared RE/CE reduces electrode connections, while retaining common-cell electrical and chemical coupling. Global CELL_EN also means independent live per-WE disconnect is outside this revision's scope. The validation matrix separates these limitations from measurable transfer/noise performance.
+**Next:** factory review → USB-only bring-up → dummy-cell accuracy, noise and crosstalk tests. Reset/startup and selected-channel EIS still need physical validation. No measured accuracy is claimed.
 
-**A procurement-driven switch substitution.** U21-U24 use ADG704BRMZ-REEL7 in place of unavailable TMUX1104DGSR. Pin mapping, truth table, logic thresholds and control-rail behavior were reviewed. On-resistance, leakage, capacitance and charge injection change the precision and settling problem; per-range calibration and physical residual characterization remain required.
+## Engineering detail
 
-**Compact flex with manufacturing constraints.** The nominal 41.8x42.5 mm,0.20 mm four-layer board has196 fitted parts on both faces. Connected GND/power routing, coverlay/paste geometry and BOM/CPL alignment were audited. Assembly fixtures, reflow sequence, placement acceptance, USB retention and populated-area support remain manufacturing/mechanical work. A flexible board does not establish stretchable-system performance.
+[Requirements](requirements.md) · [Error budget](error-budget.md) · [Validation plan](validation.md) · [한국어](README.ko.md)
 
-## Current evidence boundary
+The detailed tables retain 26 requirements, 18 error terms and 25 validation groups. Calculations and evidence labels share one baseline; 22 physical test groups remain unrun.
 
-The release records 0 DRC errors,0 warnings and 0 unconnected items under its enabled rules,0 ERC violations and matching202 component references/687 physical pads. Ignored check classes are retained in the evidence summary. These are CAD outcomes. The physical tests in the matrix are NOT_RUN, and quantities without measurements use null values.
+Design baseline: RevM20 / FW18, 15 October 2026. The [earlier AD5941 toolkit](https://www.charleskim99.com/projects/5_project/) is a separate architecture.
 
-Default operation is3CA+pH. Four-current operation requires unpowered physical selector changes. The implemented firmware does not provide CV/DPV, wireless telemetry, automatic battery charging policy or qualified EIS accuracy. Historical AD5941 results on the personal site belong to the earlier architecture.
-
-## Reproduce the documentation
-
-The portable calculations require only Python3:
-
-```bash
-python3 docs/projects/stk-revm20/tools/build.py --check
-```
-
-To regenerate the hash-bound source index and pages from the matching private release, use `--release /path/to/release`. The script refuses a mismatched PCB hash. Website and Markdown tables are generated from one baseline. The full board source and procurement/account information are outside this publication.
+Reproduce the calculations with `python3 docs/projects/stk-revm20/tools/build.py --check`. Regeneration with `--release /path/to/release` verifies the PCB hash before rebuilding the records and summary. Full CAD/firmware and procurement/account data are outside this publication.
