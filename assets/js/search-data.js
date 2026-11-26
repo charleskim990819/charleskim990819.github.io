@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-projects",
           title: "projects",
-          description: "Ongoing research and engineering projects in liquid-metal electronics, wearable bioelectronics, and electrochemical biosensing.",
+          description: "Liquid-metal materials, wearable instruments, and software I have built or contributed to.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -41,39 +41,59 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-pda-lm-ink",
           title: 'PDA-LM Ink',
-          description: "Post-treatment-free liquid-metal ink via catechol–Ga³⁺ coordination — a 10-minute deep dive",
+          description: "A water-based ink that forms conductive traces as it dries.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-water-transfer-electronics",
           title: 'Water-Transfer Electronics',
-          description: "Hydroprinted liquid-metal circuits transferred onto skin via PVA carrier",
+          description: "A printed circuit transferred onto the back of a hand to light four LEDs.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-wearable-bci",
           title: 'Wearable BCI',
-          description: "A direction I want to work in — non-invasive ear-EEG with soft, liquid-metal contacts",
+          description: "A research direction for recording brain signals around the ear with soft contacts.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-pdrn-bio-coating",
           title: 'PDRN Bio-Coating',
-          description: "Dual anti-fouling + tissue-regeneration coating for sutures and intramuscular EMG",
+          description: "Testing a coating for sutures and implanted muscle electrodes.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{id: "projects-ad5941-ec-sensor-toolkit",
           title: 'AD5941 EC Sensor Toolkit',
-          description: "Portable 4-channel electrochemical sensor based on AD5941 + ESP32-C6",
+          description: "A four-channel portable potentiostat for testing printed electrodes.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
             },},{id: "projects-multimodal-bioelectronics",
           title: 'Multimodal Bioelectronics',
-          description: "A design concept — one wearable front end for electrochemistry, EMG and stimulation",
+          description: "A concept for combining chemical sensing, muscle recording, and stimulation in one wearable.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
+            },},{id: "projects-research-bottleneck-map",
+          title: 'Research Bottleneck Map',
+          description: "A Korean-language web app for reading and annotating research limitations reported in paper abstracts.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/bottleneck-map/";
+            },},{id: "projects-screen-printed-electrochemical-electrodes",
+          title: 'Screen-printed electrochemical electrodes',
+          description: "Measuring how consistently soft, printed electrodes work from one device to the next.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/printed-electrodes/";
+            },},{id: "projects-liquid-metal-electrodes-for-ecg-and-emg",
+          title: 'Liquid-metal electrodes for ECG and EMG',
+          description: "Testing printed electrodes for recording heart and muscle signals in a collaborative study.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pva-liquid-metal-electrodes/";
             },},{id: "projects-stk-revm20-sensor-front-end",
           title: 'STK RevM20 sensor front end',
-          description: "Simultaneous electrochemical sensing on a compact four-layer flex PCB",
+          description: "A flex-board design for recording three currents and pH simultaneously, with a verification plan.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/stk-revm20/";
+            },},{id: "projects-stretchable-emg-circuit",
+          title: 'Stretchable EMG circuit',
+          description: "A liquid-metal circuit that reads muscle activity and uses it to control an RC car.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/stretchable-exg/";
             },},{id: "teachings-bio-electrical-electronics-laboratory-바이오전기전자실험",
           title: 'Bio-electrical Electronics Laboratory (바이오전기전자실험)',
           description: "Teaching assistant for the undergraduate hands-on laboratory course on biopotential acquisition, electrochemical sensing, and embedded data acquisition.",
