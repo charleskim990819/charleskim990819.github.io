@@ -1,11 +1,12 @@
 ---
 layout: page
 title: PDA-LM Ink
-description: Post-treatment-free liquid-metal ink via catechol–Ga³⁺ coordination — a 10-minute deep dive
+description: A water-based ink that forms conductive traces as it dries.
 img: assets/img/proj_pdalm_ink.png
 importance: 1
 category: research
 related_publications: false
+tabs: true
 toc:
   sidebar: left
 ---
@@ -33,7 +34,7 @@ Today's liquid metal (LM) inks force you to choose between:
 - 🧴 **Primer it** — coat the substrate first with an adhesion promoter (often solvent-based, often toxic).
 - 🌫️ **Solvent it** — disperse the LM particles in ethanol or worse. Slow drying, biocompatibility headaches.
 
-We asked: *what if a single chemistry could do all three jobs — particle-to-particle conduction, substrate adhesion, and water dispersibility — at once?*
+We asked: _what if a single chemistry could do all three jobs — particle-to-particle conduction, substrate adhesion, and water dispersibility — at once?_
 
 The answer turned out to be sitting in mussel biology.
 
@@ -73,18 +74,18 @@ Most catechol-on-LM work uses tannic acid or DOPA polymerized in Tris buffer. Bo
 
 Eight key LM-ink papers, three failure modes:
 
-| Approach | Group / year | Solves conduction? | Solves adhesion? | Substrate-agnostic? |
-|---|---|---|---|---|
-| Mechanical sintering | Dickey et al. | ✅ (after sintering) | ❌ | ❌ |
-| Laser sintering | Various | ✅ (after sintering) | ❌ | ❌ |
-| Sub-µm milling + solvent ink | Qi 2022 | ✅ | ❌ | partial |
-| Polymer primer underlayer | Pyeon 2023 | ✅ | ✅ (primer-dependent) | ❌ |
-| Magnetic field percolation | Kim 2026 | ✅ (in-field) | ❌ | requires AMF |
-| **PDA-LM (this work)** | **2026** | **✅ (instant)** | **✅ (catechol)** | **✅ (water-based)** |
+| Approach                     | Group / year  | Solves conduction?   | Solves adhesion?      | Substrate-agnostic?  |
+| ---------------------------- | ------------- | -------------------- | --------------------- | -------------------- |
+| Mechanical sintering         | Dickey et al. | ✅ (after sintering) | ❌                    | ❌                   |
+| Laser sintering              | Various       | ✅ (after sintering) | ❌                    | ❌                   |
+| Sub-µm milling + solvent ink | Qi 2022       | ✅                   | ❌                    | partial              |
+| Polymer primer underlayer    | Pyeon 2023    | ✅                   | ✅ (primer-dependent) | ❌                   |
+| Magnetic field percolation   | Kim 2026      | ✅ (in-field)        | ❌                    | requires AMF         |
+| **PDA-LM (this work)**       | **2026**      | **✅ (instant)**     | **✅ (catechol)**     | **✅ (water-based)** |
 
 The pattern: every prior approach **trades off one problem for another**. Nobody hit all three boxes with a single ink.
 
-> The deeper reason: most groups treated the Ga₂O₃ shell as a *problem to remove*. We treated it as a *binding site to exploit*.
+> The deeper reason: most groups treated the Ga₂O₃ shell as a _problem to remove_. We treated it as a _binding site to exploit_.
 
 {% endtab %}
 
@@ -100,7 +101,7 @@ This is the framing I am presenting at the [2026 MRS Fall Meeting](https://www.m
 
 Polydopamine's catechol groups chelate the Ga³⁺ surface sites of the amorphous Ga₂O₃ shell. This achieves **two things simultaneously**:
 
-1. **Particle–particle bridging** → PDA chains link adjacent EGaIn particles through shared Ga³⁺ coordination → conductive network forms *as the water evaporates*, no sintering needed.
+1. **Particle–particle bridging** → PDA chains link adjacent EGaIn particles through shared Ga³⁺ coordination → conductive network forms _as the water evaporates_, no sintering needed.
 2. **Particle–substrate adhesion** → PDA's residual catechols (and pyrogallol-like oxidation products) bind hydroxyl-rich surfaces (PDMS, PVA, paper, skin) through the same Holten-Andersen mechanism.
 
 The pH controls coordination stoichiometry (mono / bis / tris), which we tune to balance conductivity vs. adhesion.
@@ -130,16 +131,19 @@ Three orthogonal evidence streams:
 ### The ink, the film, the demo
 
 #### The ink
+
 - **Composition:** EGaIn microparticles + dopamine·HCl + water (with pH adjuster)
 - **Storage:** stable for weeks at 4 °C
 - **Patterning:** screen-print, brush, spray, hydroprint — your choice
 
 #### The film
+
 - Conductive **immediately after water evaporation** (no post-treatment)
 - Sheet resistance comparable to sintered EGaIn films
 - Bonds to PDMS, PVA, paper, glass, and skin without primer
 
 #### The demonstrator
+
 - **4-LED circuit water-transferred onto skin** (see [Water-Transfer Electronics](/projects/2_project/))
 - Conductivity verified by lighting the LEDs immediately after transfer
 - No sintering step, no primer step, no organic solvent
@@ -180,7 +184,7 @@ We make three "first-time" claims, each backed by a different experiment:
 
 ### Why this matters beyond our group
 
-Anyone building **wearable bioelectronics, transient electronics, or printable functional materials** has been waiting for an LM ink that *just works* on soft, biological substrates. PDA-LM removes the sintering / primer / solvent overhead, making LM printing accessible to labs that don't have laser sintering rigs or chemistry hoods optimized for organic solvents.
+Anyone building **wearable bioelectronics, transient electronics, or printable functional materials** has been waiting for an LM ink that _just works_ on soft, biological substrates. PDA-LM removes the sintering / primer / solvent overhead, making LM printing accessible to labs that don't have laser sintering rigs or chemistry hoods optimized for organic solvents.
 
 {% endtab %}
 

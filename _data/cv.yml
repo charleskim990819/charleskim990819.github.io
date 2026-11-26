@@ -5,10 +5,11 @@ cv:
   location: Seoul, Republic of Korea
   image: ""
   summary: >
-    Graduate researcher at Yonsei University (BLISS Lab, Prof. Jungmok Seo) developing
-    post-treatment-free liquid-metal inks, wearable bioelectronics, and miniaturized
-    electrochemical sensor toolkits. Bridging materials chemistry, embedded firmware,
-    and biointerface engineering.
+    I develop liquid metal inks for stretchable electronics and build instruments
+    for electrochemical sensors. I was an undergraduate research intern in the BLISS
+    Lab from January to August 2025. In September 2025, I joined the integrated
+    M.S./Ph.D. program at Yonsei University and continued in the lab as a graduate
+    researcher under Prof. Jungmok Seo.
 
   social_networks:
     - network: GitHub
@@ -23,12 +24,12 @@ cv:
 
   sections:
     Education:
-      - institution: Yonsei University — BLISS Lab
+      - institution: Yonsei University
         location: Seoul, Republic of Korea
         url: https://bliss.yonsei.ac.kr/
-        area: Electrical & Electronic Engineering (Liquid-Metal Electronic Materials track)
-        studyType: M.S. student
-        start_date: 2025
+        area: Electrical and Electronic Engineering
+        studyType: Integrated M.S./Ph.D. Program
+        start_date: 2025-09
         end_date: present
         highlights:
           - "Advisor: Prof. Jungmok Seo (BLISS Lab)"
@@ -52,6 +53,13 @@ cv:
           Accepted and scheduled for 30 November 2026.
 
     Experience:
+      - company: BLISS Lab, School of Electrical and Electronic Engineering, Yonsei University
+        position: Graduate Researcher
+        location: Seoul, Republic of Korea
+        start_date: 2025-09
+        end_date: present
+        summary: Research on liquid metal inks, stretchable electronics, and wearable sensors with Prof. Jungmok Seo.
+
       - company: Yonsei University · School of Electrical & Electronic Engineering
         position: Supervising Teaching Assistant — Capstone Design (전기전자종합설계)
         location: Seoul, Republic of Korea
@@ -62,6 +70,13 @@ cv:
           cycle, from problem definition through prototype and final demonstration.
           The team was selected as one of eight Outstanding Research Teams in the
           department.
+
+      - company: BLISS Lab, School of Electrical and Electronic Engineering, Yonsei University
+        position: Undergraduate Research Intern
+        location: Seoul, Republic of Korea
+        start_date: 2025-01
+        end_date: 2025-08
+        summary: Undergraduate research internship with Prof. Jungmok Seo.
 
       - company: Yonsei University · School of Electrical & Electronic Engineering
         position: Undergraduate Laboratory Instructor (Teaching Assistant) — Bio-electrical Electronics Lab
@@ -148,7 +163,14 @@ cv:
 
     Skills:
       - category: Materials & Chemistry
-        items: [EGaIn / liquid metal processing, Catechol-metal coordination, PDA / DOPA chemistry, Screen-printed electrodes (SPE), Lubricant / anti-fouling coatings]
+        items:
+          [
+            EGaIn / liquid metal processing,
+            Catechol-metal coordination,
+            PDA / DOPA chemistry,
+            Screen-printed electrodes (SPE),
+            Lubricant / anti-fouling coatings,
+          ]
       - category: Computational
         items: [DFT (ORCA r2SCAN-3c, wB97X-D3/TZVP, BSSE), Python (data analysis, plotters), MATLAB]
       - category: Embedded & Hardware

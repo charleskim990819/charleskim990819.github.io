@@ -7,20 +7,19 @@ eyebrow: Graduate Researcher · BLISS Lab · Yonsei University
 headline: 'Stretchable<br>electronics,<br>from the<br><span class="accent">ink</span> up.'
 lead: Liquid-metal inks, printed electrodes, and the miniaturized instruments that read them — one stack, from coordination chemistry to firmware.
 meta:
-  - '<strong>Yonsei University</strong> · Seoul'
+  - "<strong>Yonsei University</strong> · Seoul"
   - 'Prof. Jungmok Seo · <strong><a href="https://bliss.yonsei.ac.kr/" target="_blank" style="color:inherit">BLISS Lab</a></strong>'
-  - 'M.S. candidate · Electrical &amp; Electronic Engineering'
+  - "Integrated M.S./Ph.D. Student · Electrical and Electronic Engineering"
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
   name: Chansoo (Charles) Kim
-  subline: EE · B.S. 2025 · Graduate Researcher 2025–
+  subline: B.S. 2025 · Graduate Researcher since September 2025
   stats:
-    - { n: 'MRS ’26', l: 'Fall · oral' }
-    - { n: '6',       l: 'Projects' }
-    - { n: '4',       l: 'Areas' }
+    - { n: "MRS ’26", l: "Fall · oral" }
+    - { n: "4", l: "Areas" }
 
 selected_papers: false
 social: true

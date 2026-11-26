@@ -32,17 +32,17 @@ BROWSERS = [
 ]
 
 CSS = """
-@page { size: A4; margin: 16mm 15mm 14mm; }
+@page { size: A4; margin: 13mm 15mm; }
 * { box-sizing: border-box; }
 body { font-family: "Inter","Segoe UI","Malgun Gothic",sans-serif; font-size: 9.4pt;
-       line-height: 1.45; color:#16161d; margin:0; }
+       line-height: 1.30; color:#16161d; margin:0; }
 header { border-bottom: 1.6pt solid #16161d; padding-bottom: 7pt; margin-bottom: 12pt; }
 h1 { font-size: 21pt; font-weight: 700; letter-spacing:-0.02em; margin:0 0 2pt; }
 .label { font-size: 10pt; color:#4a4a58; margin-bottom:5pt; }
 .contact { font-size: 8.1pt; color:#5c5c6a; }
-h2 { font-size: 8.4pt; font-weight:700; letter-spacing:0.13em; text-transform:uppercase;
-     color:#3a3aa0; border-bottom:0.5pt solid #c9c9d4; padding-bottom:3pt; margin:13pt 0 7pt; }
-.entry { display:grid; grid-template-columns: 72pt 1fr; gap:9pt; margin-bottom:8pt;
+h2 { break-after: avoid-page; font-size: 8.4pt; font-weight:700; letter-spacing:0.13em; text-transform:uppercase;
+     color:#3a3aa0; border-bottom:0.5pt solid #c9c9d4; padding-bottom:3pt; margin:9pt 0 5pt; }
+.entry { display:grid; grid-template-columns: 72pt 1fr; gap:9pt; margin-bottom:6pt;
          break-inside: avoid; }
 .date { font-size:8.1pt; color:#6a6a78; padding-top:1pt; white-space:nowrap; }
 .t { font-weight:600; font-size:9.8pt; }
@@ -111,7 +111,7 @@ def build_html(cv):
             entry_block(
                 date_range(e["start_date"], e["end_date"]),
                 f'{esc(e["studyType"])}, {esc(e["area"])}',
-                esc(e["institution"]),
+                e["institution"],
                 f"<ul>{bullets}</ul>",
             )
         )
@@ -123,7 +123,7 @@ def build_html(cv):
             entry_block(
                 date_range(e["start_date"], e["end_date"]),
                 esc(e["position"]),
-                esc(e["company"]),
+                e["company"],
                 f'<p>{md(e["summary"].strip())}</p>',
             )
         )

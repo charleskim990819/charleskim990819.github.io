@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Wearable BCI
-description: A direction I want to work in — non-invasive ear-EEG with soft, liquid-metal contacts
+description: A research direction for recording brain signals around the ear with soft contacts.
 img: assets/img/proj_wearable_bci.png
 importance: 3
 category: interests

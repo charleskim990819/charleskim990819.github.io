@@ -1,7 +1,7 @@
 ---
 layout: page
 title: STK RevM20 sensor front end
-description: Simultaneous electrochemical sensing on a compact four-layer flex PCB
+description: A flex-board design for recording three currents and pH simultaneously, with a verification plan.
 permalink: /projects/stk-revm20/
 img: assets/projects/stk-revm20/architecture.svg
 importance: 0

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Multimodal Bioelectronics
-description: A design concept — one wearable front end for electrochemistry, EMG and stimulation
+description: A concept for combining chemical sensing, muscle recording, and stimulation in one wearable.
 img: assets/img/proj_multimodal.png
 importance: 2
 category: interests
@@ -21,12 +21,12 @@ A single front end that runs all three on a shared electrode fabric would remove
 
 ## What such a front end would need
 
-| Function | Candidate part | Why |
-|---|---|---|
-| Electrochemistry (CV / CA / EIS / OCP) | AD5941 | The part I already know from the toolkit build |
-| EMG / EEG (24-bit, 8-ch) | ADS131M08 | Simultaneous sampling matters when channels are compared |
-| Stimulation (16-ch) | Intan RHS2116 | Programmable biphasic current |
-| MCU + BLE | DA14531 / nRF52 class | Chosen against power and footprint budget |
+| Function                               | Candidate part        | Why                                                      |
+| -------------------------------------- | --------------------- | -------------------------------------------------------- |
+| Electrochemistry (CV / CA / EIS / OCP) | AD5941                | The part I already know from the toolkit build           |
+| EMG / EEG (24-bit, 8-ch)               | ADS131M08             | Simultaneous sampling matters when channels are compared |
+| Stimulation (16-ch)                    | Intan RHS2116         | Programmable biphasic current                            |
+| MCU + BLE                              | DA14531 / nRF52 class | Chosen against power and footprint budget                |
 
 ## The parts I do not know yet
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Water-Transfer Electronics
-description: Hydroprinted liquid-metal circuits transferred onto skin via PVA carrier
+description: A printed circuit transferred onto the back of a hand to light four LEDs.
 img: assets/img/proj_water_transfer.png
 importance: 2
 category: research

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AD5941 EC Sensor Toolkit
-description: Portable 4-channel electrochemical sensor based on AD5941 + ESP32-C6
+description: A four-channel portable potentiostat for testing printed electrodes.
 img: assets/img/proj_ec_toolkit.png
 importance: 1
 category: engineering
@@ -37,4 +37,4 @@ A **palm-sized, BLE-enabled, 4-channel electrochemical sensor toolkit (STK)** bu
 
 ## DIY screen-printed electrodes
 
-A parallel track produces in-house SPEs from SEBS substrates with Dycotec DM-CAP-2100S carbon ink — a low-cost alternative to commercial DRP-110 chips, with the same standard 3-electrode geometry (WE / RE / CE).
+A parallel track produces [in-house SPEs](/projects/printed-electrodes/) from SEBS substrates with Dycotec DM-CAP-2100S carbon ink — a low-cost alternative to commercial DRP-110 chips, with the same standard 3-electrode geometry (WE / RE / CE).
