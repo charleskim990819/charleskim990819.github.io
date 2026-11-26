@@ -91,7 +91,7 @@ ninja.data = [{
               window.location.href = "/projects/stk-revm20/";
             },},{id: "projects-stretchable-emg-circuit",
           title: 'Stretchable EMG circuit',
-          description: "A liquid-metal circuit that reads muscle activity and uses it to control an RC car.",
+          description: "A stretchable electrode readout design and an EMG-controlled RC car demonstration.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/stretchable-exg/";
             },},{id: "teachings-bio-electrical-electronics-laboratory-바이오전기전자실험",
